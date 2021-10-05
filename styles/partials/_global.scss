@@ -1,0 +1,15 @@
+@use "colors" as *;
+@use "mixins" as *;
+@use "variables" as *;
+@use "typography" as *;
+
+// Global will have all styling elements that is persistent across all pages. At sprint 1 we can assume what that is.
+
+body {
+  background-color: $White;
+  color: $BandSite-DarkBlack;
+  font-family: $font-stack;
+  margin: 0;
+}
+
+// This is for the top-nav

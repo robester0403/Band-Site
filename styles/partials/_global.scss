@@ -6,10 +6,105 @@
 // Global will have all styling elements that is persistent across all pages. At sprint 1 we can assume what that is.
 
 body {
-  background-color: $White;
-  color: $BandSite-DarkBlack;
+  background-color: $white;
+  color: $bandsite-darkblack;
   font-family: $font-stack;
   margin: 0;
 }
 
+.logo {
+  width: 7.5rem;
+  height: 1.25rem;
+  font-size: $logo-txtsize;
+  text-align: center;
+}
+
 // This is for the top-nav
+.top-nav {
+  background-color: $bandsite-black;
+  color: $white;
+
+  &__logo {
+    width: 7.5rem;
+    height: 1.25rem;
+    font-size: $logo-txtsize;
+    text-align: center;
+    // !! padding & logo mixin?
+    padding: 0.75rem; 
+    margin: 0 auto;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__link {
+    width: 50%;
+    text-align: center;
+    padding-bottom: 0.75rem;
+    font-size: $mobile-subheader-txtsize;
+
+    &:hover {
+      border-bottom: 2px solid white;
+      box-sizing: border-box;
+    }
+  }
+
+}
+
+
+
+// This is for the footer
+.footer-bar {
+  background-color: $bandsite-black;
+  color: $white;
+
+  &__top-list {
+    font-size: $mobile-page-section-header-txtsize;
+    line-height: $mobile-page-section-header-lineheight;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__top-list-item {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: flex-start;
+    width: 45%;
+  }
+  
+  &__top-list-item-icon {
+    margin:0 auto 0 0;
+    
+  }
+
+  &__bot-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__bot-card {
+    padding: 0.5rem;
+  }
+
+  &__bot-card-title {
+    font-size: $mobile-subheader-txtsize;
+    line-height: $mobile-subheader-lineheight;
+    font-weight: $mobile-subheader-txtweight;
+  }
+
+  &__bot-card-copy {
+    font-size: $mobile-body-footer-copy-txtsize;
+    line-height: $mobile-body-footer-copy-lineheight;
+    font-weight: $mobile-body-footer-copy-txtweight;
+  }
+
+  &__copyright {
+    font-size: $mobile-body-footer-copy-txtsize;
+    line-height: $mobile-body-footer-copy-lineheight;
+    font-weight: $mobile-body-footer-copy-txtweight;
+  }
+
+}

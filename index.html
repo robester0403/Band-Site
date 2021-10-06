@@ -10,10 +10,14 @@
 <body>
 
 <!-- This will be the top-nav and styling is in global -->
-<header>  
-  Bandsite
-    Biography
-    Shows
+<header class="top-nav">  
+  <div class="top-nav__logo">
+    BANDSITE
+  </div>
+  <div class="top-nav__list">
+    <div class="top-nav__link">Biography</div>
+    <div class="top-nav__link">Shows</div>
+  </div>
 </header>
 
 <!-- This will be the hero image -->
@@ -45,37 +49,73 @@
     <img src="" alt="event image 1">
 
 <!-- This will be the footer -->
-<footer>
-  Get in Touch
-    <img src="" alt="instagram image">
-    <img src="" alt="facebook image">
-    <img src="" alt="twitter image">
-  
-    Cam Adams
-      The Bees Knees Management
+<!-- Top part of responsive footer -->
+<footer class="footer-bar">
+  <section class="footer-bar__top-list">
+    <div class="footer-bar__top-list-item">
+      Get in Touch
+    </div>
+    <div class="footer-bar__top-list-item">
+      <img src="./assets/icons/Icon-instagram.svg" alt="instagram image" class="footer-bar__top-list-item-icon"/>
+      <img src="./assets/icons/Icon-facebook.svg" alt="facebook image" class="footer-bar__top-list-item-icon"/>
+      <img src="./assets/icons/Icon-twitter.svg" alt="twitter image" class="footer-bar__top-list-item-icon"/>
+    </div>
+  </section>
+<!-- Bottom part of responsive footer -->
+  <section class="footer-bar__bot-list">
+    <div class="footer-bar__bot-card">
+      <div class="footer-bar__bot-card-title">
+        <div>Cam Adams</div>
+        <div>The Bees Knees Management</div>
+      </div>
+      <div class="footer-bar__bot-card-copy">
+        <div>503 Broadway Penthouse,</div>
+        <div>New York, NY 10012, USA</div>
+      </div>
+      <div class="footer-bar__bot-card-copy">
+        info@thebeesknees.com
+      </div>
+    </div>
 
-      503 Broadway Penthouse,
-      New York, NY 10012, USA
+    <div class="footer-bar__bot-card">
+      <div class="footer-bar__bot-card-title">
+        <div>Pearl Gregg</div>
+        <div>Limitless Artist Group</div>
+      </div>
+      <div class="footer-bar__bot-card-copy">
+        <div>Booking Agent for</div>
+        <div>US / South America / Japan</div>
+      </div>
+      <div class="footer-bar__bot-card-copy">
+        pearl.gregg@limitlessag.com
+      </div>
+    </div>
 
-      info@thebeesknees.com
+    <div class="footer-bar__bot-card">
+      <div class="footer-bar__bot-card-title">
+        <div>Carson Whyte</div>
+        <div>ARCH Entertainment</div>
+      </div>
+      <div class="footer-bar__bot-card-copy">
+        <div>
+          Booking Agent for
+        </div>
+        <div>
+          UK / EU / AU
+        </div>
+      </div>
+      <div class="footer-bar__bot-card-copy">
+        cwhyte@archentertainment.com
+      </div>
+    </div>
+  </section>
 
-    Pearl Gregg
-      Limitless Artist Group
-
-      Booking Agent for
-
-      US / South America / Japan
-
-      pearl.gregg@limitlessag.com
-
-    Carson Whyte
-      ARCH Entertainment
-
-      Booking Agent for
-
-      UK / EU / AU
-
-      cwhyte@archentertainment.com
-  </footer>
+  <div class="logo">
+    BANDSITE
+  </div>
+  <div class="footer-bar__copyright">
+    Copyright The Bees Knees © 2021 All Rights Reserved
+  </div>
+</footer>
 </body>
 </html>

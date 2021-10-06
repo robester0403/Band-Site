@@ -1,1 +1,46 @@
 @use "variables" as *;
+
+// These are meta mixins
+@mixin logo-style{
+  width: $logo-width;
+  height: $logo-height;
+  font-size: $logo-txtsize;
+  text-align: center
+}
+
+// These are mobile mixins
+@mixin mobile-page-header-style {
+  font-size: $mobile-page-section-header-txtsize;
+  line-height: $mobile-page-section-header-lineheight;
+  font-weight: $mobile-page-section-header-txtweight;
+}
+
+@mixin mobile-section-header-style {
+  font-size: $mobile-page-section-header-txtsize;
+  line-height: $mobile-page-section-header-lineheight;
+  font-weight: $mobile-page-section-header-txtweight;
+}
+
+@mixin mobile-subheader-style {
+  font-size: $mobile-subheader-txtsize;
+  line-height: $mobile-subheader-lineheight;
+  font-weight: $mobile-subheader-txtweight;
+}
+
+@mixin mobile-body-copy-style {
+  font-size: $mobile-body-footer-copy-txtsize;
+  line-height: $mobile-body-footer-copy-lineheight;
+  font-weight: $mobile-body-footer-copy-txtweight;
+}
+
+@mixin mobile-footer-copy-style {
+  font-size: $mobile-body-footer-copy-txtsize;
+  line-height: $mobile-body-footer-copy-lineheight;
+  font-weight: $mobile-body-footer-copy-txtweight;
+}
+
+@mixin mobile-labels-buttons-style {
+  font-size: $mobile-labels-buttons-txtsize;
+  line-height: $mobile-labels-buttons-lineheight;
+  font-weight: $mobile-labels-buttons-txtweight;
+}

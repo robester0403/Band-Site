@@ -1,19 +1,27 @@
-
+// These are mobile variables
+// mobile font sizes
 $mobile-page-section-header-txtsize: 1.5rem;
 $mobile-subheader-txtsize: 0.875rem;
 $mobile-body-footer-copy-txtsize: 0.8125rem;
 $mobile-labels-buttons-txtsize: 0.625rem;
-$logo-txtsize: 1.25rem;
 
+// mobile line heights
 $mobile-page-section-header-lineheight: 2rem;
 $mobile-subheader-lineheight: 1.375rem;
 $mobile-body-footer-copy-lineheight: 1.125rem;
 $mobile-labels-buttons-lineheight: 1.25rem;
 
+// mobile txt weights
 $mobile-page-section-header-txtweight: 700;
 $mobile-subheader-txtweight: 600;
 $mobile-body-footer-copy-txtweight: 400;
 $mobile-labels-buttons-txtweight: 700;
 
+// These are for managing the logo styling
+$logo-txtsize: 1.25rem;
+$logo-width: 7.5rem;
+$logo-height: 1.25rem;
+
+// These are the breakpoint variables
 $tablet: 768px;
 $desktop: 1280px;

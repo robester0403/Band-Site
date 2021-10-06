@@ -47,10 +47,48 @@ body {
   text-align: center;
   padding-bottom: 0.75rem;
   font-size: 0.875rem;
+  border-bottom: 2px solid #323232;
 }
 .top-nav__link:hover {
   border-bottom: 2px solid white;
   box-sizing: border-box;
+}
+
+.hero {
+  background-image: url(../assets/images/hero-bio.jpg);
+  max-width: 100%;
+  height: 13.5rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero__title {
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+.main__title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+.main__image {
+  max-width: 100%;
+}
+.main__quote {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 600;
+}
+.main__body-copy {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
 }
 
 .footer-bar {
@@ -60,6 +98,7 @@ body {
 .footer-bar__top-list {
   font-size: 1.5rem;
   line-height: 2rem;
+  font-weight: 700;
   display: flex;
   flex-direction: column;
   align-items: flex-start;

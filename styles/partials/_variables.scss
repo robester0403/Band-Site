@@ -1,57 +1,66 @@
 // These are for managing the logo styling
-$logo-txtsize: 1.25rem;
+$logo-txtsz: 1.25rem;
 $logo-width: 7.5rem;
 $logo-height: 1.25rem;
 
 // These are mobile variables
 // mobile font sizes
-$m-pg-section-header-txtsize: 1.5rem;
-$m-subheader-txtsize: 0.875rem;
-$m-body-footer-copy-txtsize: 0.8125rem;
-$m-labels-buttons-txtsize: 0.625rem;
+$m-pg-hdr-txtsz: 1.5rem;
+$m-sec-hdr-txtsz: 1.5rem;
+$m-subhd-txtsz: 0.875rem;
+$m-ft-copy-txtsz: 0.8125rem;
+$m-bdy-copy-txtsz: 0.8125rem;
+$m-lbls-btn-txtsz: 0.625rem;
 
 // mobile line heights
-$m-pg-section-header-lineheight: 2rem;
-$m-subheader-lineheight: 1.375rem;
-$m-body-footer-copy-lineheight: 1.125rem;
-$m-labels-buttons-lineheight: 1.25rem;
+$m-pg-hdr-lnhgt: 2rem;
+$m-sec-hdr-lnhgt: 2rem;
+$m-subhd-lnhgt: 1.375rem;
+$m-bdy-copy-lnhgt: 1.125rem;
+$m-ft-copy-lnhgt: 1.125rem;
+$m-lbls-btn-lnhgt: 1.25rem;
 
 // mobile txt weights
-$m-pg-section-header-txtweight: 700;
-$m-subheader-txtweight: 600;
-$m-body-footer-copy-txtweight: 400;
-$m-labels-buttons-txtweight: 700;
+$m-pg-hdr-txtwgt: 700;
+$m-sec-hdr-txtwgt: 700;
+$m-subhd-txtwgt: 600;
+$m-bdy-copy-txtwgt: 400;
+$m-ft-copy-txtwgt: 400;
+$m-lbls-btn-txtwgt: 700;
 
 // mobile padding increments
-$m-pad-top-headlines: 1.5rem;
-$m-pad-below-headlines: 1rem;
+$m-pad-top-hdln: 1.5rem;
+$m-pad-below-hdln: 1rem;
 $m-pad-btw-comp: 1rem;
 
 // These are Desktop/Tablet variables
 // dt font sizes
-$dt-page-header-txtsize: 3.75rem;
-$dt-section-header-txtsize: 2.25rem;
-$dt-subheader-txtsize: 1.5rem;
-$dt-body-footer-copy-txtsize: 0.875rem;
-$dt-labels-buttons-txtsize: 0.75rem;
+$dt-pg-hdr-txtsz: 3.75rem;
+$dt-sec-hdr-txtsz: 2.25rem;
+$dt-sunhd-txtsz: 1.5rem;
+$dt-bdy-copy-txtsz: 0.875rem;
+$dt-ft-copy-txtsz: 0.875rem;
+$dt-lbls-btn-txtsz: 0.75rem;
 
 // dt line heights
-$dt-page-header-lineheight: 4.25rem;
-$dt-section-header-lineheight: 2.75rem;
-$dt-subheader-lineheight: 2rem;
-$dt-body-copy-lineheight: 1.375rem;
-$dt-footer-copy-lineheight: 1.25rem;
-$dt-labels-buttons-lineheight: 1.25rem;
+$dt-pg-hdr-lnhgt: 4.25rem;
+$dt-sec-hdr-lnhgt: 2.75rem;
+$dt-sunhd-lnhgt: 2rem;
+$dt-bdy-copy-lnhgt: 1.375rem;
+$dt-ft-copy-lnhgt: 1.25rem;
+$dt-lbls-btn-lnhgt: 1.25rem;
 
 // dt txt weights
-$dt-page-section-header-txtweight: 700;
-$dt-subheader-txtweight: 600;
-$dt-body-footer-copy-txtweight: 400;
-$dt-labels-buttons-txtweight: 700;
+$dt-pg-hdr-txtwgt: 700;
+$dt-sec-hdr-txtwgt: 700;
+$dt-sunhd-txtwgt: 600;
+$dt-bdy-copy-txtwgt: 400;
+$dt-ft-copy-txtwgt: 400;
+$dt-lbls-btn-txtwgt: 700;
 
 // dt padding increments
-$dt-pad-top-headlines: 3rem;
-$dt-pad-below-headlines: 2.25rem;
+$dt-pad-top-hdln: 3rem;
+$dt-pad-below-hdln: 2.25rem;
 $dt-pad-btw-comp: 2.25rem;
 
 // These are the breakpoint variables

@@ -4,7 +4,7 @@
 @mixin logo-style{
   width: $logo-width;
   height: $logo-height;
-  font-size: $logo-txtsize;
+  font-size: $logo-txtsz;
   text-align: center
 }
 
@@ -21,38 +21,38 @@
 }
 
 // These are mobile mixins
-@mixin mobile-page-header-style {
-  font-size: $m-pg-section-header-txtsize;
-  line-height: $m-pg-section-header-lineheight;
-  font-weight: $m-pg-section-header-txtweight;
+@mixin m-pg-hdr-style {
+  font-size: $m-pg-hdr-txtsz;
+  line-height: $m-pg-hdr-lnhgt;
+  font-weight: $m-pg-hdr-txtwgt;
 }
 
-@mixin mobile-section-header-style {
-  font-size: $m-pg-section-header-txtsize;
-  line-height: $m-pg-section-header-lineheight;
-  font-weight: $m-pg-section-header-txtweight;
+@mixin m-sec-hdr-style {
+  font-size: $m-sec-hdr-txtsz;
+  line-height: $m-sec-hdr-lnhgt;
+  font-weight: $m-sec-hdr-txtwgt;
 }
 
-@mixin mobile-subheader-style {
-  font-size: $m-subheader-txtsize;
-  line-height: $m-subheader-lineheight;
-  font-weight: $m-subheader-txtweight;
+@mixin m-sunhd-style {
+  font-size: $m-subhd-txtsz;
+  line-height: $m-subhd-lnhgt;
+  font-weight: $m-subhd-txtwgt;
 }
 
-@mixin mobile-body-copy-style {
-  font-size: $m-body-footer-copy-txtsize;
-  line-height: $m-body-footer-copy-lineheight;
-  font-weight: $m-body-footer-copy-txtweight;
+@mixin m-bdy-copy-style {
+  font-size: $m-bdy-copy-txtsz;
+  line-height: $m-bdy-copy-lnhgt;
+  font-weight: $m-bdy-copy-txtwgt;
 }
 
-@mixin mobile-footer-copy-style {
-  font-size: $m-body-footer-copy-txtsize;
-  line-height: $m-body-footer-copy-lineheight;
-  font-weight: $m-body-footer-copy-txtweight;
+@mixin m-ft-copy-style {
+  font-size: $m-ft-copy-txtsz;
+  line-height: $m-ft-copy-lnhgt;
+  font-weight: $m-ft-copy-txtwgt;
 }
 
-@mixin mobile-labels-buttons-style {
-  font-size: $m-labels-buttons-txtsize;
-  line-height: $m-labels-buttons-lineheight;
-  font-weight: $m-labels-buttons-txtweight;
+@mixin m-lbls-btn-style {
+  font-size: $m-lbls-btn-txtsz;
+  line-height: $m-lbls-btn-lnhgt;
+  font-weight: $m-lbls-btn-txtwgt;
 }

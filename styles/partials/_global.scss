@@ -25,7 +25,7 @@ body {
 
   &__logo {
     @include logo-style;
-    padding: $m-pad-below-headlines 0;
+    padding: $m-pad-below-hdln 0;
     margin: 0 auto;
 
     @include tablet {
@@ -43,7 +43,7 @@ body {
   }
 
   &__link {
-    @include mobile-subheader-style;
+    @include m-sunhd-style;
     color: $mercury;
     width: 50%;
     text-align: center;
@@ -85,7 +85,7 @@ body {
 
   &__title {
     color: $white;
-    @include mobile-page-header-style;
+    @include m-pg-hdr-style;
     padding-left: $m-pad-btw-comp;
   }
 }
@@ -95,8 +95,8 @@ body {
 .main {
 
   &__title {
-    @include mobile-page-header-style;
-    padding: $m-pad-top-headlines $m-pad-btw-comp $m-pad-below-headlines $m-pad-btw-comp;
+    @include m-pg-hdr-style;
+    padding: $m-pad-top-hdln $m-pad-btw-comp $m-pad-below-hdln $m-pad-btw-comp;
 
   }
 
@@ -116,22 +116,22 @@ body {
   }
 
   &__quote {
-    @include mobile-subheader-style;
+    @include m-sunhd-style;
     padding: 0 $m-pad-btw-comp;
   }
 
   &__quote-author {
-    @include mobile-subheader-style;
+    @include m-sunhd-style;
     padding: $m-pad-btw-comp $m-pad-btw-comp 0 $m-pad-btw-comp;
   }
 
   &__body-title{
-    @include mobile-subheader-style;
-    padding: $m-pad-top-headlines $m-pad-btw-comp $m-pad-below-headlines $m-pad-btw-comp;
+    @include m-sunhd-style;
+    padding: $m-pad-top-hdln $m-pad-btw-comp $m-pad-below-hdln $m-pad-btw-comp;
   }
 
   &__body-copy{
-    @include mobile-body-copy-style;
+    @include m-bdy-copy-style;
     padding: 0 $m-pad-btw-comp $m-pad-btw-comp $m-pad-btw-comp;
     margin: 0;
   }
@@ -141,7 +141,7 @@ body {
 .photo {
   background-color: $alabaster;
   padding: $m-pad-btw-comp $m-pad-btw-comp 0 $m-pad-btw-comp;
-  @include mobile-section-header-style;
+  @include m-sec-hdr-style;
   display: flex;
   flex-wrap: wrap;
 
@@ -154,11 +154,11 @@ body {
 .footer-bar {
   background-color: $bandsite-black;
   color: $white;
-  padding: $m-pad-top-headlines $m-pad-btw-comp $m-pad-below-headlines $m-pad-btw-comp;
+  padding: $m-pad-top-hdln $m-pad-btw-comp $m-pad-below-hdln $m-pad-btw-comp;
   
 
   &__top-list {
-    @include mobile-page-header-style;
+    @include m-pg-hdr-style;
     font-weight: 400;
     display: flex;
     flex-direction: column;
@@ -188,17 +188,17 @@ body {
   }
 
   &__bot-card-title {
-    @include mobile-subheader-style;
-    padding-bottom: $m-pad-below-headlines;
+    @include m-sunhd-style;
+    padding-bottom: $m-pad-below-hdln;
   }
 
   &__bot-card-copy {
-    @include mobile-footer-copy-style;
-    padding-bottom: $m-pad-below-headlines;
+    @include m-ft-copy-style;
+    padding-bottom: $m-pad-below-hdln;
   }
 
   &__copyright {
-    @include mobile-footer-copy-style;
+    @include m-ft-copy-style;
     padding-bottom:  $m-pad-btw-comp;
   }
 
@@ -206,6 +206,6 @@ body {
 
 .endlogo {
   @include logo-style;
-  padding: $m-pad-top-headlines 0 $m-pad-below-headlines 0; 
+  padding: $m-pad-top-hdln 0 $m-pad-below-hdln 0; 
   text-align: left;
 } 

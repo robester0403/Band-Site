@@ -12,35 +12,60 @@ body {
   margin: 0;
 }
 
-
-
 // This is for the top-nav
 .top-nav {
   background-color: $bandsite-black;
   color: $white;
 
+  @include tablet {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
   &__logo {
     @include logo-style;
-    padding: $mobile-pad-below-headlines 0;
-    text-align: center;
+    padding: $m-pad-below-headlines 0;
     margin: 0 auto;
+
+    @include tablet {
+      margin: 0;
+      padding: 0 1.5rem;
+    }
   }
 
   &__list {
     display: flex;
+    width: 100%;
+    @include tablet {
+      align-items: center;
+    }
   }
 
   &__link {
+    @include mobile-subheader-style;
+    color: $mercury;
     width: 50%;
     text-align: center;
-    padding-bottom: $mobile-pad-btw-comp;
-    @include mobile-subheader-style;
-    border-bottom: 2px solid $bandsite-black;
+    padding-bottom: 1rem;
+    border-bottom: 0.1875rem solid $bandsite-black;
+
+    @include tablet {
+      width: fit-content;
+      padding: 1.5rem;
+    }
 
     &:hover {
-      border-bottom: 3px solid white;
-      padding-bottom: 13px;
+      color:$white;
+      border-bottom: 0.1875rem solid $white;
+      padding-bottom: 1rem;
       box-sizing: border-box;
+      font-weight: 700;
+
+      @include tablet {
+        margin: 0 1.5rem;
+        padding: 1.5rem 0 1.3125rem 0;
+      }
     }
   }
 
@@ -48,7 +73,7 @@ body {
 
 // This is for the hero section
 .hero {
-  background-image: url(../assets/images/hero-bio.jpg);
+  background:linear-gradient(0deg, rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(../assets/images/hero-bio.jpg);
   max-width: 100%;
   height: 13.5rem;
   background-position: center;
@@ -61,7 +86,7 @@ body {
   &__title {
     color: $white;
     @include mobile-page-header-style;
-    padding-left: $mobile-pad-btw-comp;
+    padding-left: $m-pad-btw-comp;
   }
 }
 
@@ -71,34 +96,43 @@ body {
 
   &__title {
     @include mobile-page-header-style;
-    padding: $mobile-pad-top-headlines $mobile-pad-btw-comp $mobile-pad-below-headlines $mobile-pad-btw-comp;
+    padding: $m-pad-top-headlines $m-pad-btw-comp $m-pad-below-headlines $m-pad-btw-comp;
 
   }
 
+  &__image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
   &__image {
+    padding: 0 $m-pad-btw-comp $m-pad-btw-comp $m-pad-btw-comp;
+    flex-shrink: 0;
     max-width: 100%;
-    padding: 0 $mobile-pad-btw-comp $mobile-pad-btw-comp $mobile-pad-btw-comp;
+    object-fit: cover;
     box-sizing: border-box;
   }
 
   &__quote {
     @include mobile-subheader-style;
-    padding: 0 $mobile-pad-btw-comp;
+    padding: 0 $m-pad-btw-comp;
   }
 
   &__quote-author {
     @include mobile-subheader-style;
-    padding: $mobile-pad-btw-comp $mobile-pad-btw-comp 0 $mobile-pad-btw-comp;
+    padding: $m-pad-btw-comp $m-pad-btw-comp 0 $m-pad-btw-comp;
   }
 
   &__body-title{
     @include mobile-subheader-style;
-    padding: $mobile-pad-top-headlines $mobile-pad-btw-comp $mobile-pad-below-headlines $mobile-pad-btw-comp;
+    padding: $m-pad-top-headlines $m-pad-btw-comp $m-pad-below-headlines $m-pad-btw-comp;
   }
 
   &__body-copy{
     @include mobile-body-copy-style;
-    padding: 0 $mobile-pad-btw-comp $mobile-pad-btw-comp $mobile-pad-btw-comp;
+    padding: 0 $m-pad-btw-comp $m-pad-btw-comp $m-pad-btw-comp;
     margin: 0;
   }
 
@@ -106,21 +140,21 @@ body {
 
 .photo {
   background-color: $alabaster;
-  padding: $mobile-pad-btw-comp $mobile-pad-btw-comp 0 $mobile-pad-btw-comp;
+  padding: $m-pad-btw-comp $m-pad-btw-comp 0 $m-pad-btw-comp;
   @include mobile-section-header-style;
   display: flex;
   flex-wrap: wrap;
 
   &__image {
     width: 100%;
-    padding-bottom: $mobile-pad-btw-comp;
+    padding-bottom: $m-pad-btw-comp;
   }
 }
 // This is for the footer
 .footer-bar {
   background-color: $bandsite-black;
   color: $white;
-  padding: $mobile-pad-top-headlines $mobile-pad-btw-comp $mobile-pad-below-headlines $mobile-pad-btw-comp;
+  padding: $m-pad-top-headlines $m-pad-btw-comp $m-pad-below-headlines $m-pad-btw-comp;
   
 
   &__top-list {
@@ -132,7 +166,7 @@ body {
   }
 
   &__top-list-item {
-    padding-bottom: $mobile-pad-btw-comp;
+    padding-bottom: $m-pad-btw-comp;
     display: flex;
     justify-content: flex-start;
     width: 11rem;
@@ -155,23 +189,23 @@ body {
 
   &__bot-card-title {
     @include mobile-subheader-style;
-    padding-bottom: $mobile-pad-below-headlines;
+    padding-bottom: $m-pad-below-headlines;
   }
 
   &__bot-card-copy {
     @include mobile-footer-copy-style;
-    padding-bottom: $mobile-pad-below-headlines;
+    padding-bottom: $m-pad-below-headlines;
   }
 
   &__copyright {
     @include mobile-footer-copy-style;
-    padding-bottom:  $mobile-pad-btw-comp;
+    padding-bottom:  $m-pad-btw-comp;
   }
 
 }
 
 .endlogo {
   @include logo-style;
-  padding: $mobile-pad-top-headlines 0 $mobile-pad-below-headlines 0; 
+  padding: $m-pad-top-headlines 0 $m-pad-below-headlines 0; 
   text-align: left;
 } 

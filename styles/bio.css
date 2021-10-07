@@ -24,35 +24,70 @@ body {
   background-color: #323232;
   color: #FFFFFF;
 }
+@media (min-width: 768px) {
+  .top-nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
 .top-nav__logo {
   width: 7.5rem;
   height: 1.25rem;
   font-size: 1.25rem;
   text-align: center;
   padding: 1rem 0;
-  text-align: center;
   margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .top-nav__logo {
+    margin: 0;
+    padding: 0 1.5rem;
+  }
 }
 .top-nav__list {
   display: flex;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .top-nav__list {
+    align-items: center;
+  }
 }
 .top-nav__link {
-  width: 50%;
-  text-align: center;
-  padding-bottom: 1rem;
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 600;
-  border-bottom: 2px solid #323232;
+  color: #E1E1E1;
+  width: 50%;
+  text-align: center;
+  padding-bottom: 1rem;
+  border-bottom: 0.1875rem solid #323232;
+}
+@media (min-width: 768px) {
+  .top-nav__link {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 1.5rem;
+  }
 }
 .top-nav__link:hover {
-  border-bottom: 3px solid white;
-  padding-bottom: 13px;
+  color: #FFFFFF;
+  border-bottom: 0.1875rem solid #FFFFFF;
+  padding-bottom: 1rem;
   box-sizing: border-box;
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  .top-nav__link:hover {
+    margin: 0 1.5rem;
+    padding: 1.5rem 0 1.3125rem 0;
+  }
 }
 
 .hero {
-  background-image: url(../assets/images/hero-bio.jpg);
+  background: linear-gradient(0deg, rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(../assets/images/hero-bio.jpg);
   max-width: 100%;
   height: 13.5rem;
   background-position: center;
@@ -76,9 +111,18 @@ body {
   font-weight: 700;
   padding: 1.5rem 1rem 1rem 1rem;
 }
+.main__image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
 .main__image {
-  max-width: 100%;
   padding: 0 1rem 1rem 1rem;
+  flex-shrink: 0;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   box-sizing: border-box;
 }
 .main__quote {

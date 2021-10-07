@@ -12,9 +12,7 @@ body {
   margin: 0;
 }
 
-.logo {
-  @include logo-style;
-}
+
 
 // This is for the top-nav
 .top-nav {
@@ -23,9 +21,10 @@ body {
 
   &__logo {
     @include logo-style;
-    padding: 0.75rem; 
+    padding: $mobile-pad-below-headlines 0;
+    text-align: center;
     margin: 0 auto;
-  } 
+  }
 
   &__list {
     display: flex;
@@ -34,12 +33,13 @@ body {
   &__link {
     width: 50%;
     text-align: center;
-    padding-bottom: 0.75rem;
-    font-size: $mobile-subheader-txtsize;
+    padding-bottom: $mobile-pad-btw-comp;
+    @include mobile-subheader-style;
     border-bottom: 2px solid $bandsite-black;
 
     &:hover {
-      border-bottom: 2px solid white;
+      border-bottom: 3px solid white;
+      padding-bottom: 13px;
       box-sizing: border-box;
     }
   }
@@ -61,6 +61,7 @@ body {
   &__title {
     color: $white;
     @include mobile-page-header-style;
+    padding-left: $mobile-pad-btw-comp;
   }
 }
 
@@ -70,43 +71,71 @@ body {
 
   &__title {
     @include mobile-page-header-style;
+    padding: $mobile-pad-top-headlines $mobile-pad-btw-comp $mobile-pad-below-headlines $mobile-pad-btw-comp;
+
   }
 
   &__image {
     max-width: 100%;
+    padding: 0 $mobile-pad-btw-comp $mobile-pad-btw-comp $mobile-pad-btw-comp;
+    box-sizing: border-box;
   }
 
   &__quote {
     @include mobile-subheader-style;
+    padding: 0 $mobile-pad-btw-comp;
+  }
+
+  &__quote-author {
+    @include mobile-subheader-style;
+    padding: $mobile-pad-btw-comp $mobile-pad-btw-comp 0 $mobile-pad-btw-comp;
   }
 
   &__body-title{
-
+    @include mobile-subheader-style;
+    padding: $mobile-pad-top-headlines $mobile-pad-btw-comp $mobile-pad-below-headlines $mobile-pad-btw-comp;
   }
 
   &__body-copy{
     @include mobile-body-copy-style;
+    padding: 0 $mobile-pad-btw-comp $mobile-pad-btw-comp $mobile-pad-btw-comp;
+    margin: 0;
   }
 
 }
 
+.photo {
+  background-color: $alabaster;
+  padding: $mobile-pad-btw-comp $mobile-pad-btw-comp 0 $mobile-pad-btw-comp;
+  @include mobile-section-header-style;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__image {
+    width: 100%;
+    padding-bottom: $mobile-pad-btw-comp;
+  }
+}
 // This is for the footer
 .footer-bar {
   background-color: $bandsite-black;
   color: $white;
+  padding: $mobile-pad-top-headlines $mobile-pad-btw-comp $mobile-pad-below-headlines $mobile-pad-btw-comp;
+  
 
   &__top-list {
     @include mobile-page-header-style;
+    font-weight: 400;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
 
   &__top-list-item {
-    padding: 0.5rem;
+    padding-bottom: $mobile-pad-btw-comp;
     display: flex;
     justify-content: flex-start;
-    width: 45%;
+    width: 11rem;
   }
   
   &__top-list-item-icon {
@@ -121,19 +150,28 @@ body {
   }
 
   &__bot-card {
-    padding: 0.5rem;
+    text-align: left;
   }
 
   &__bot-card-title {
     @include mobile-subheader-style;
+    padding-bottom: $mobile-pad-below-headlines;
   }
 
   &__bot-card-copy {
     @include mobile-footer-copy-style;
+    padding-bottom: $mobile-pad-below-headlines;
   }
 
   &__copyright {
     @include mobile-footer-copy-style;
+    padding-bottom:  $mobile-pad-btw-comp;
   }
 
 }
+
+.endlogo {
+  @include logo-style;
+  padding: $mobile-pad-top-headlines 0 $mobile-pad-below-headlines 0; 
+  text-align: left;
+} 

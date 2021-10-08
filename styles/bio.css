@@ -94,8 +94,12 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .hero {
+    height: 25rem;
+  }
 }
 .hero__title {
   color: #FFFFFF;
@@ -104,12 +108,36 @@ body {
   font-weight: 700;
   padding-left: 1rem;
 }
+@media (min-width: 768px) {
+  .hero__title {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-weight: 700;
+    padding-left: 2.25rem;
+  }
+}
 
+.main__container {
+  padding: 0 1rem;
+}
+@media (min-width: 768px) {
+  .main__container {
+    padding: 0 6rem;
+  }
+}
 .main__title {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
-  padding: 1.5rem 1rem 1rem 1rem;
+  padding: 1.5rem 0 1rem 1rem;
+}
+@media (min-width: 768px) {
+  .main__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+    padding: 3rem 0 2.25rem 2.25rem;
+  }
 }
 .main__image-container {
   display: flex;
@@ -118,37 +146,79 @@ body {
   overflow: hidden;
 }
 .main__image {
-  padding: 0 1rem 1rem 1rem;
+  padding: 0 0 1rem 0;
   flex-shrink: 0;
   max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   box-sizing: border-box;
 }
+@media (min-width: 768px) {
+  .main__image {
+    padding: 0 0 2.25rem 0;
+  }
+}
 .main__quote {
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 600;
-  padding: 0 1rem;
+  padding: 0 0 1rem 0;
+}
+@media (min-width: 768px) {
+  .main__quote {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    padding: 0 0 2.25rem 0;
+  }
 }
 .main__quote-author {
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 600;
-  padding: 1rem 1rem 0 1rem;
+}
+@media (min-width: 768px) {
+  .main__quote-author {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+  }
+}
+@media (min-width: 768px) {
+  .main__body-container {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 .main__body-title {
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 600;
-  padding: 1.5rem 1rem 1rem 1rem;
+  padding: 1.5rem 0 1rem 0;
+}
+@media (min-width: 768px) {
+  .main__body-title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    padding: 3rem 0 2.25rem 0;
+    width: 47.5%;
+  }
 }
 .main__body-copy {
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 400;
-  padding: 0 1rem 1rem 1rem;
+  padding: 0 0 1rem 0;
   margin: 0;
+}
+@media (min-width: 768px) {
+  .main__body-copy {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    padding: 0 0 2.25rem 0;
+  }
 }
 
 .photo {

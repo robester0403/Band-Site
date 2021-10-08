@@ -43,7 +43,7 @@ body {
   }
 
   &__link {
-    @include m-sunhd-style;
+    @include m-subhd-style;
     color: $mercury;
     width: 50%;
     text-align: center;
@@ -80,13 +80,22 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
-  flex-direction: column;
-  justify-content: center;   
+  align-items: center;   
+
+  @include tablet {
+    height: 25rem;
+  }
 
   &__title {
     color: $white;
     @include m-pg-hdr-style;
     padding-left: $m-pad-btw-comp;
+
+
+    @include tablet {
+      @include dt-pg-hdr-style;
+      padding-left: $dt-pad-btw-comp;
+    }
   }
 }
 
@@ -94,10 +103,22 @@ body {
 
 .main {
 
+  &__container {
+    padding: 0 $m-pad-btw-comp;
+
+    @include tablet {
+      padding: 0 6rem;
+    }
+  }
+
   &__title {
     @include m-pg-hdr-style;
-    padding: $m-pad-top-hdln $m-pad-btw-comp $m-pad-below-hdln $m-pad-btw-comp;
+    padding: $m-pad-top-hdln 0 $m-pad-below-hdln 1rem;
 
+    @include tablet {
+      @include dt-sec-hdr-style;
+      padding: $dt-pad-top-hdln 0 $dt-pad-below-hdln 2.25rem;
+    }
   }
 
   &__image-container {
@@ -108,32 +129,64 @@ body {
   }
 
   &__image {
-    padding: 0 $m-pad-btw-comp $m-pad-btw-comp $m-pad-btw-comp;
+    padding: 0 0 $m-pad-btw-comp 0;
     flex-shrink: 0;
     max-width: 100%;
     object-fit: cover;
     box-sizing: border-box;
+
+    @include tablet {
+      padding: 0 0 $dt-pad-btw-comp 0;
+    }
   }
 
   &__quote {
-    @include m-sunhd-style;
-    padding: 0 $m-pad-btw-comp;
+    @include m-subhd-style;
+    padding: 0 0 $m-pad-btw-comp 0;
+
+    @include tablet {
+      @include dt-subhd-style;
+      padding: 0 0 $dt-pad-btw-comp 0;
+    }
   }
 
   &__quote-author {
-    @include m-sunhd-style;
-    padding: $m-pad-btw-comp $m-pad-btw-comp 0 $m-pad-btw-comp;
+    @include m-subhd-style;
+
+    @include tablet {
+      @include dt-subhd-style;
+      // padding: 0 0 $dt-pad-btw-comp 0;
+    }
+  }
+
+  &__body-container {
+
+    @include tablet {
+    display: flex;
+    justify-content: space-between;
+    }
   }
 
   &__body-title{
-    @include m-sunhd-style;
-    padding: $m-pad-top-hdln $m-pad-btw-comp $m-pad-below-hdln $m-pad-btw-comp;
+    @include m-subhd-style;
+    padding: $m-pad-top-hdln 0 $m-pad-below-hdln 0;
+
+    @include tablet {
+      @include dt-subhd-style;
+      padding: $dt-pad-top-hdln 0 $dt-pad-below-hdln 0;
+      width: 47.5%;
+    }
   }
 
   &__body-copy{
     @include m-bdy-copy-style;
-    padding: 0 $m-pad-btw-comp $m-pad-btw-comp $m-pad-btw-comp;
+    padding: 0 0 $m-pad-btw-comp 0;
     margin: 0;
+
+    @include tablet {
+      @include dt-bdy-copy-style;
+      padding: 0 0 $dt-pad-btw-comp 0;
+    }
   }
 
 }
@@ -188,7 +241,7 @@ body {
   }
 
   &__bot-card-title {
-    @include m-sunhd-style;
+    @include m-subhd-style;
     padding-bottom: $m-pad-below-hdln;
   }
 

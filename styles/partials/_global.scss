@@ -193,14 +193,33 @@ body {
 
 .photo {
   background-color: $alabaster;
-  padding: $m-pad-btw-comp $m-pad-btw-comp 0 $m-pad-btw-comp;
-  @include m-sec-hdr-style;
+  padding: 0 $m-pad-btw-comp;
+
+  &__title {
+    @include m-sec-hdr-style;
+    padding: $m-pad-top-hdln 0 $m-pad-below-hdln 0;
+
+    @include tablet {
+      @include dt-sec-hdr-style;
+      padding: $dt-pad-top-hdln 0 $dt-pad-below-hdln 0;
+    }
+  }
+
+  &__container {
   display: flex;
   flex-wrap: wrap;
-
+  justify-content: space-evenly;
+  }
+  
   &__image {
     width: 100%;
     padding-bottom: $m-pad-btw-comp;
+
+    @include tablet {
+      width: 30%;
+
+      padding-bottom: $dt-pad-btw-comp;
+    }
   }
 }
 // This is for the footer
@@ -208,6 +227,11 @@ body {
   background-color: $bandsite-black;
   color: $white;
   padding: $m-pad-top-hdln $m-pad-btw-comp $m-pad-below-hdln $m-pad-btw-comp;
+  position: relative;
+
+  @include tablet {
+    padding: $dt-pad-top-hdln $dt-pad-btw-comp $dt-pad-below-hdln $dt-pad-btw-comp;
+  }
   
 
   &__top-list {
@@ -216,24 +240,46 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    @include tablet {
+      @include dt-sec-hdr-style;
+      font-weight: 400;
+      flex-direction: row;
+      align-items: center;
+    }
   }
 
   &__top-list-item {
-    padding-bottom: $m-pad-btw-comp;
+    width: 11rem;
+    padding: 0 $m-pad-btw-comp $m-pad-btw-comp 0;
     display: flex;
     justify-content: flex-start;
-    width: 11rem;
+
+    @include tablet {
+      width: fit-content;
+      padding: 0 $dt-pad-btw-comp $dt-pad-btw-comp 0;
+    }
   }
   
   &__top-list-item-icon {
     margin:0 auto 0 0;
     
+    @include tablet {
+      margin:0 $dt-pad-btw-comp 0 0;
+    }
   }
 
   &__bot-list {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 43.5rem;
+    }
   }
 
   &__bot-card {
@@ -243,22 +289,42 @@ body {
   &__bot-card-title {
     @include m-subhd-style;
     padding-bottom: $m-pad-below-hdln;
+
+    @include tablet {
+      @include dt-ft-copy-style;
+      padding-bottom: $dt-pad-btw-comp;
+    }
   }
 
   &__bot-card-copy {
     @include m-ft-copy-style;
     padding-bottom: $m-pad-below-hdln;
+
+    @include tablet {
+      @include dt-ft-copy-style;
+      padding-bottom: $dt-pad-btw-comp;
+    }
   }
 
   &__copyright {
     @include m-ft-copy-style;
-    padding-bottom:  $m-pad-btw-comp;
-  }
+    // padding-bottom:  $m-pad-btw-comp;
 
+    @include tablet {
+    @include dt-ft-copy-style;
+    // padding-bottom:  $dt-pad-btw-comp;
+  }
+  }
 }
 
 .endlogo {
   @include logo-style;
   padding: $m-pad-top-hdln 0 $m-pad-below-hdln 0; 
   text-align: left;
+
+  @include tablet {
+  position: absolute;
+  top: 9%;
+  right: 2.5%;
+  }
 } 

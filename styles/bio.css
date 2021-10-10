@@ -1,3 +1,31 @@
+@-webkit-keyframes beebuzz {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+@keyframes beebuzz {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
 @font-face {
   font-family: "Avenir";
   src: url("../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
@@ -26,6 +54,27 @@ h1 {
 
 h3 {
   margin: 0rem;
+}
+
+h4 {
+  margin: 0rem;
+}
+
+h5 {
+  margin: 0;
+  font-size: initial;
+  font-weight: initial;
+}
+
+a {
+  text-decoration: none;
+  color: initial;
+}
+a:link {
+  color: #FFFFFF;
+}
+a:visited {
+  color: #FFFFFF;
 }
 
 .top-nav {
@@ -63,7 +112,7 @@ h3 {
   }
 }
 .top-nav__link {
-  font-size: 0.875rem;
+  font-size: 0.875remz;
   line-height: 1.375rem;
   font-weight: 600;
   color: #E1E1E1;
@@ -71,6 +120,14 @@ h3 {
   text-align: center;
   padding-bottom: 1rem;
   border-bottom: 0.1875rem solid #323232;
+}
+.top-nav__link:hover {
+  -webkit-animation: beebuzz 0.3s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+          animation: beebuzz 0.3s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  perspective: 1000px;
 }
 @media (min-width: 48rem) {
   .top-nav__link {
@@ -180,7 +237,7 @@ h3 {
   }
 }
 .main__quote {
-  font-size: 0.875rem;
+  font-size: 0.875remz;
   line-height: 1.375rem;
   font-weight: 600;
   padding: 0 0 1rem 0;
@@ -194,7 +251,7 @@ h3 {
   }
 }
 .main__quote-author {
-  font-size: 0.875rem;
+  font-size: 0.875remz;
   line-height: 1.375rem;
   font-weight: 600;
 }
@@ -212,7 +269,7 @@ h3 {
   }
 }
 .main__body-title {
-  font-size: 0.875rem;
+  font-size: 0.875remz;
   line-height: 1.375rem;
   font-weight: 600;
   padding: 1.5rem 0 1rem 0;
@@ -268,6 +325,10 @@ h3 {
 .photo__image {
   width: 100%;
   padding-bottom: 1rem;
+  filter: grayscale(75%);
+}
+.photo__image:hover {
+  filter: grayscale(0%);
 }
 @media (min-width: 48rem) {
   .photo__image {
@@ -345,7 +406,7 @@ h3 {
   text-align: left;
 }
 .footer-bar__bot-card-title {
-  font-size: 0.875rem;
+  font-size: 0.875remz;
   line-height: 1.375rem;
   font-weight: 600;
   padding-bottom: 1rem;

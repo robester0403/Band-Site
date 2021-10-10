@@ -22,74 +22,74 @@
 
 // These are mobile mixins
 @mixin m-pg-hdr-style {
-  font-size: $m-pg-hdr-txtsz;
-  line-height: $m-pg-hdr-lnhgt;
-  font-weight: $m-pg-hdr-txtwgt;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
 }
 
 @mixin m-sec-hdr-style {
-  font-size: $m-sec-hdr-txtsz;
-  line-height: $m-sec-hdr-lnhgt;
-  font-weight: $m-sec-hdr-txtwgt;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
 }
 
 @mixin m-subhd-style {
-  font-size: $m-subhd-txtsz;
-  line-height: $m-subhd-lnhgt;
-  font-weight: $m-subhd-txtwgt;
+  font-size: 0.875remz;
+  line-height: 1.375rem;
+  font-weight: 600;
 }
 
 @mixin m-bdy-copy-style {
-  font-size: $m-bdy-copy-txtsz;
-  line-height: $m-bdy-copy-lnhgt;
-  font-weight: $m-bdy-copy-txtwgt;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
 }
 
 @mixin m-ft-copy-style {
-  font-size: $m-ft-copy-txtsz;
-  line-height: $m-ft-copy-lnhgt;
-  font-weight: $m-ft-copy-txtwgt;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
 }
 
 @mixin m-lbls-btn-style {
-  font-size: $m-lbls-btn-txtsz;
-  line-height: $m-lbls-btn-lnhgt;
-  font-weight: $m-lbls-btn-txtwgt;
+  font-size: 0.625rem;
+  line-height: 1.25rem;
+  font-weight: 700;
 }
 
 // Tablet and Desktop Styles
 @mixin dt-pg-hdr-style {
-  font-size: $dt-pg-hdr-txtsz;
-  line-height: $dt-pg-hdr-lnhgt;
-  font-weight: $dt-pg-hdr-txtwgt;
+  font-size: 3.75rem;
+  line-height: 4.25rem;
+  font-weight: 700;
 }
 
 @mixin dt-sec-hdr-style {
-  font-size: $dt-sec-hdr-txtsz;
-  line-height: $dt-sec-hdr-lnhgt;
-  font-weight: $dt-sec-hdr-txtwgt;
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  font-weight: 700;
 }
 
 @mixin dt-subhd-style {
-  font-size: $dt-subhd-txtsz;
-  line-height: $dt-subhd-lnhgt;
-  font-weight: $dt-subhd-txtwgt;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
 }
 
 @mixin dt-bdy-copy-style {
-  font-size: $dt-bdy-copy-txtsz;
-  line-height: $dt-bdy-copy-lnhgt;
-  font-weight: $dt-bdy-copy-txtwgt;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 400;
 }
 
 @mixin dt-ft-copy-style {
-  font-size: $dt-ft-copy-txtsz;
-  line-height: $dt-ft-copy-lnhgt;
-  font-weight: $dt-ft-copy-txtwgt;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
 }
 
 @mixin dt-lbls-btn-style {
-  font-size: $dt-lbls-btn-txtsz;
-  line-height: $dt-lbls-btn-lnhgt;
-  font-weight: $dt-lbls-btn-txtwgt;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 700;
 }

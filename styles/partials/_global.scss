@@ -76,9 +76,11 @@ a {
 
   &__link {
     @include m-subhd-style;
+    font-size: 1rem;
     color: $mercury;
     width: 50%;
     text-align: center;
+    padding-top: 0.5rem;
     padding-bottom: 1rem;
     border-bottom: 0.1875rem solid $bandsite-black;
 
@@ -146,6 +148,12 @@ a {
     @include tablet {
       padding: 0 6rem;
     }
+
+    @include desktop{
+      padding: 0 15rem;
+    }
+
+
   }
 
   &__title {
@@ -155,6 +163,10 @@ a {
     @include tablet {
       @include dt-sec-hdr-style;
       padding: 3rem 0 2.25rem 2.25rem;
+    }
+
+    @include desktop {
+      padding: 3rem 0 2.25rem 10rem;
     }
   }
 
@@ -185,7 +197,7 @@ a {
       padding: 0 0 2.25rem 0;
       min-height: none;
       max-height: none;
-      height: 35rem;
+      height: 32rem;
     }
   }
 
@@ -234,6 +246,7 @@ a {
     @include tablet {
       @include dt-bdy-copy-style;
       padding: 0 0 2.25rem 0;
+      width: 48%;
     }
   }
 }

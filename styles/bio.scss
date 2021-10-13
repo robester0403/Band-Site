@@ -173,10 +173,22 @@
       filter: grayscale(0%);
     }
 
-
     @include tablet {
       width: 30%;
       padding-bottom: 2.25rem;
+    }
+  }
+}
+
+.comments {
+
+  &__title {
+    @include m-sec-hdr-style;
+    padding: 1.5rem 0 1rem 0;
+
+    @include tablet {
+      @include dt-sec-hdr-style;
+      padding: 3rem 0 2.25rem 0;
     }
   }
 }

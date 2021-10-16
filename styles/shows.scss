@@ -46,3 +46,25 @@
 
   }
 }
+
+.section-heading {
+  @include m-sec-hdr-style;
+  padding: 2rem 0 1rem 0;
+}
+
+.shows {
+  
+  &__card{
+
+  }
+
+  &__sub-card {
+
+  }
+
+  &__heading {
+    @include m-bdy-copy-style;
+    color: $silver;
+    padding: 1.4rem 0 0.5rem 0;
+  }
+}

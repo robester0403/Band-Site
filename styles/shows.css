@@ -352,7 +352,7 @@ a:visited {
   padding: 0 1.25rem;
 }
 .shows__heading {
-  font-size: 0.625rem;
+  font-size: 1rem;
   line-height: 1.25rem;
   font-weight: 400;
   color: #AFAFAF;
@@ -375,8 +375,7 @@ a:visited {
   margin: 0.75rem 0;
 }
 
-.myClass {
-  background-color: red;
-  color: white;
+.showsHighlight {
+  background-color: #E1E1E1;
   font-size: 44px;
 }/*# sourceMappingURL=shows.css.map */

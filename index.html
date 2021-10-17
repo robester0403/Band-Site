@@ -68,25 +68,8 @@
           </article>
         </div>
     </section>
-    <!-- This will the comments section -->
-    <section class="comment">
-      <h1 class='comment__title'>
-        Join the Conversation
-      </h1>
-    </section>
-    <section class='comment'>
-      <img src='./assets/images/Mohan-muruge.jpg' class='comment__avatar'>
-      <form class='comment__form'>
-        <label class='comment__form-label' for='name'>NAME</label>
-        <input class='comment__form-input' type='text' name='name' value="Enter your name" />
-        <label class='comment__form-label' for='msg'>COMMENT</label>
-        <textarea class='comment__form-msg' name='msg'>Add a new comment</textarea>
-        <input class="comment__form-submit" type="submit" name="submit" value="COMMENT" />
-        <p class="comment__form-message"></p>
-      </form>
-    </section>
-  
-    <section class="comments-container"></section>
+
+
     <!-- This will be the photo gallery -->
     <section>
       <div class='photo'>
@@ -108,10 +91,23 @@
         </article>
       </div>
     </section>
-    <section>
-        <h1 class='comments__title'>
-          Join the Conversation
-        </h1>
+    <!-- This will the comments section -->
+    <section class='comment__wrap'>
+      <h1 class='comment__title'>
+        Join the Conversation
+      </h1>
+      <article class="comment__container">
+        <img src='./assets/images/Mohan-muruge.jpg' class='comment__avatar'>
+        <form class='comment__form'>
+          <label class='comment__form-label' for='name'>NAME</label>
+          <input class='comment__form-input' type='text' name='name' value="Enter your name" />
+          <label class='comment__form-label' for='msg'>COMMENT</label>
+          <textarea class='comment__form-msg' name='msg'>Add a new comment</textarea>
+          <input class="comment__form-submit" type="submit" name="submit" value="COMMENT" />
+          <!-- <p class="comment__form-message"></p> -->
+        </form>
+      </article>
+    <article class="comments-container"></article>
     </section>
   </main>
 <!-- This will be the footer -->

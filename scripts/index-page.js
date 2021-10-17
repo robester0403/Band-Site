@@ -30,12 +30,31 @@ const comments = [
 
 const showComment = (comments) => {
   // <div class="comments">
-  //   <h4 class="comments__name">
-  //   <h4 class="comments__date">
-  //   <h4 class="comments__msg">
+    // <div class="comments__flex-container"> <--flex here
+        // <div class="comments__left">
+          // <aside class="comment__avatar"></aside>
+        // </div>
+        // <div class="comments__right">
+          // <h4 class="comments__name"></h4>
+        //   <h4 class="comments__date"></h4>
+        //   <h4 class="comments__msg"></h4>
+        // <div>
+    // </div>
   // </div>
   const commentsE1 = document.createElement('div');
   commentsE1.classList.add('comments');
+
+  // const flxctnrE1 = document.createElement('div');
+  // flxctnrE1.classList.add('comments__flxctner');
+
+  const avatarE1 = document.createElement('aside');
+  avatarE1.classList.add('comments__avatar');
+
+  const leftE1 = document.createElement('div');
+  leftE1.classList.add('comments__left');
+
+  const rightE1 = document.createElement('div');
+  rightE1.classList.add('comments__right');
 
   const nameE1 = document.createElement('h4');
   nameE1.classList.add('comments__name');
@@ -49,10 +68,17 @@ const showComment = (comments) => {
   msgE1.classList.add('comments__msg');
   msgE1.innerText = comments.msg;
 
-  commentsE1.appendChild(nameE1);
-  commentsE1.appendChild(dateE1);
-  commentsE1.appendChild(msgE1);
 
+  leftE1.appendChild(avatarE1);
+  rightE1.appendChild(nameE1);
+  rightE1.appendChild(dateE1);
+  rightE1.appendChild(msgE1);
+  // flxctnrE1.appendChild(leftE1);
+  // flxctnrE1.appendChild(rightE1);
+
+  commentsE1.appendChild(leftE1);
+  commentsE1.appendChild(rightE1);
+  
   commentsContainer.appendChild(commentsE1);
 }
 

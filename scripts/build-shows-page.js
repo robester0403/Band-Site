@@ -130,28 +130,28 @@ for (let i = 0; i < shows.length; i++) {
 // parent.appendChild(showsParent);
 // console.log(showsParent)
 
-// !!ask karen lol
+// !!make into a function
 document.querySelector(`.card0`).addEventListener('click', () => {
-  document.querySelector(`.card0`).classList.add('myClass');
+  document.querySelector(`.card0`).classList.add('showsHighlight');
 }); 
 
 document.querySelector(`.card1`).addEventListener('click', () => {
-  document.querySelector(`.card1`).classList.add('myClass');
+  document.querySelector(`.card1`).classList.add('showsHighlight');
 }); 
 
 document.querySelector(`.card2`).addEventListener('click', () => {
-  document.querySelector(`.card2`).classList.add('myClass');
+  document.querySelector(`.card2`).classList.add('showsHighlight');
 }); 
 
 document.querySelector(`.card3`).addEventListener('click', () => {
-  document.querySelector(`.card3`).classList.add('myClass');
+  document.querySelector(`.card3`).classList.add('showsHighlight');
 }); 
 
 document.querySelector(`.card4`).addEventListener('click', () => {
-  document.querySelector(`.card4`).classList.add('myClass');
+  document.querySelector(`.card4`).classList.add('showsHighlight');
 }); 
 
 document.querySelector(`.card5`).addEventListener('click', () => {
-  document.querySelector(`.card5`).classList.add('myClass');
+  document.querySelector(`.card5`).classList.add('showsHighlight');
 }); 
 // add class and id to shows__card line 

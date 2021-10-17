@@ -144,64 +144,6 @@
   }
 }
 
-.comment {
-  display: flex;
-  padding: 0 1rem;
-  
-  &__avatar {
-    border-radius: 50%;
-    width: 2.25rem;
-    height: 2.25rem;
-    background-color: $mercury;
-    object-fit: cover;
-    margin: 1rem 0.5rem;
-  }
-
-  &__title {
-    @include m-sec-hdr-style;
-    padding: 1.5rem 0 1rem 0;
-
-    @include tablet {
-      @include dt-sec-hdr-style;
-      padding: 3rem 0 2.25rem 0;
-    }
-  }
-
-  &__form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  &__form-label {
-    @include m-lbls-btn-style;
-    color: $silver;
-    margin-bottom: 0.2rem;
-  }
-
-  &__form-input {
-    @include m-bdy-copy-style;
-    padding: 0.5rem;
-    margin-bottom: 1.5rem;
-  }
-
-  &__form-msg {
-    @include m-bdy-copy-style;
-    padding: 0.5rem;
-    height: 5rem;
-  }
-
-  &__form-submit {
-    @include m-lbls-btn-style;
-    font-size: 1rem;
-    background-color: $bandsite-black;
-    color: $white;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    margin: 1.25rem 0;
-
-  }
-}
 
 .photo {
   background-color: $alabaster;
@@ -236,6 +178,116 @@
       width: 30%;
       padding-bottom: 2.25rem;
     }
+  }
+}
+
+.comment {
+  &__wrap{
+    margin: 01rem;
+  }
+
+  &__container{
+  display: flex;
+  @include bot-border;
+  margin-bottom: 1.25rem;
+  }
+
+  &__avatar {
+    border-radius: 50%;
+    width: 2.25rem;
+    height: 2.25rem;
+    background-color: $mercury;
+    object-fit: cover;
+    margin: 1rem 0.5rem;
+  }
+
+  &__title {
+    @include m-sec-hdr-style;
+    padding: 1rem 0;
+
+    @include tablet {
+      @include dt-sec-hdr-style;
+      padding: 3rem 0 2.25rem 0;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__form-label {
+    @include m-lbls-btn-style;
+    font-size: 0.75rem;
+    color: $silver;
+    margin-bottom: 0.2rem;
+  }
+
+  &__form-input {
+    @include m-bdy-copy-style;
+    padding: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__form-msg {
+    @include m-bdy-copy-style;
+    padding: 0.5rem;
+    height: 5rem;
+  }
+
+  &__form-submit {
+    @include m-lbls-btn-style;
+    background-color: $bandsite-black;
+    color: $white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 1.25rem 0 1.25rem 0;
+  }
+}
+
+.comments {
+  display: flex;
+  @include bot-border;
+  padding-bottom: 0.5rem;
+
+  &__left {
+    padding: 0 0.5rem 0 0;
+  }
+
+  &__avatar {
+    border-radius: 50%;
+    width: 2.25rem;
+    height: 2.25rem;
+    background-color: $mercury;
+    object-fit: cover;
+    margin: 1rem 0.5rem;
+  }
+
+  &__right {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__name {
+    @include m-bdy-copy-style;
+    font-weight: 600;
+    padding: 0.75rem 0;
+  }
+
+  &__date {
+    @include m-bdy-copy-style;
+    font-weight: 400;
+    padding: 0.75rem 0;
+    color: $silver;
+  }
+
+  &__msg {
+    @include m-bdy-copy-style;
+    font-weight: 300;
+    
   }
 }
 

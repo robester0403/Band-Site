@@ -61,9 +61,9 @@
     padding: 0 1.25rem;
   }
 
-  &__sub-card {
+  // &__sub-card {
 
-  }
+  // }
 
   &__heading {
     @include m-lbls-btn-style;
@@ -86,8 +86,7 @@
   }
 }
 
-.myClass {
-  background-color: red;
-  color: white;
+.showsHighlight {
+  background-color: $mercury;
   font-size: 44px;
 }

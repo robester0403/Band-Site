@@ -60,7 +60,7 @@ comments.forEach((comments) => {
   showComment(comments);
 });
 
-const commentForm = document.querySelector('.comment-form');
+const commentForm = document.querySelector('.comment__form');
 
 commentForm.addEventListener('submit', (event) => {
   event.preventDefault();

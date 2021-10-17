@@ -52,9 +52,9 @@ let shows = [
 // shows[i].date
 
 // create our child elements (.shows__card .shows__heading, .shows__date, .shows__venue, .shows__location, .shows__button)
-function createShowsCard(date, venue, location, parentSelector) {
+function createShowsCard(date, venue, location, parentSelector, i) {
   let showsCard = document.createElement('div');
-  showsCard.classList.add('shows__card');
+  showsCard.classList.add(`shows__card`,`card${i}`);
   
   let showsSubCard1 = document.createElement('div');
   showsSubCard1.classList.add('shows__sub-card');
@@ -93,8 +93,8 @@ function createShowsCard(date, venue, location, parentSelector) {
   showsLocation.innerText = location;
 
   let showsButton = document.createElement('div');
-  showsButton.classList.add('shows__location');
-  showsButton.innerText = 'Buy Tickets';
+  showsButton.classList.add('shows__button');
+  showsButton.innerText = 'BUY TICKETS';
 
     showsSubCard1.appendChild(showsHeadingDate);
     showsSubCard1.appendChild(showsDate);
@@ -122,10 +122,36 @@ function createShowsCard(date, venue, location, parentSelector) {
 
 // setTimeout(function() {
 for (let i = 0; i < shows.length; i++) {
-  createShowsCard(shows[i].date, shows[i].venue, shows[i].location, '.shows')
+  createShowsCard(shows[i].date, shows[i].venue, shows[i].location, '.shows', i)
 }
 // }, 2000)
 
 // let parent = document.querySelector('shows');
 // parent.appendChild(showsParent);
 // console.log(showsParent)
+
+// !!ask karen lol
+document.querySelector(`.card0`).addEventListener('click', () => {
+  document.querySelector(`.card0`).classList.add('myClass');
+}); 
+
+document.querySelector(`.card1`).addEventListener('click', () => {
+  document.querySelector(`.card1`).classList.add('myClass');
+}); 
+
+document.querySelector(`.card2`).addEventListener('click', () => {
+  document.querySelector(`.card2`).classList.add('myClass');
+}); 
+
+document.querySelector(`.card3`).addEventListener('click', () => {
+  document.querySelector(`.card3`).classList.add('myClass');
+}); 
+
+document.querySelector(`.card4`).addEventListener('click', () => {
+  document.querySelector(`.card4`).classList.add('myClass');
+}); 
+
+document.querySelector(`.card5`).addEventListener('click', () => {
+  document.querySelector(`.card5`).classList.add('myClass');
+}); 
+// add class and id to shows__card line 

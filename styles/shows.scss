@@ -49,13 +49,16 @@
 
 .section-heading {
   @include m-sec-hdr-style;
-  padding: 2rem 0 1rem 0;
+  padding: 2rem 1.25rem 1rem 1.25rem;
 }
 
 .shows {
   
   &__card{
-
+    box-sizing: border-box;
+    border-bottom: 0.1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 0 1.25rem;
   }
 
   &__sub-card {
@@ -63,8 +66,28 @@
   }
 
   &__heading {
-    @include m-bdy-copy-style;
+    @include m-lbls-btn-style;
     color: $silver;
-    padding: 1.4rem 0 0.5rem 0;
+    padding: 1.25rem 0 0.25rem 0;
   }
+
+  &__copy {
+    @include m-bdy-copy-style
+  }
+
+  &__button {
+    @include m-bdy-copy-style;
+    text-align: center;
+    padding: 1rem 0;
+    background-color: $bandsite-black;
+    color: $white;
+    border-radius: 0.5rem;
+    margin: 0.75rem 0;
+  }
+}
+
+.myClass {
+  background-color: red;
+  color: white;
+  font-size: 44px;
 }

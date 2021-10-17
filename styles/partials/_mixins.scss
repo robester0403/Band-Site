@@ -22,19 +22,19 @@
 
 // These are mobile mixins
 @mixin m-pg-hdr-style {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   line-height: 2rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 @mixin m-sec-hdr-style {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   line-height: 2rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 @mixin m-subhd-style {
-  font-size: 0.875remz;
+  font-size: 0.825remz;
   line-height: 1.375rem;
   font-weight: 600;
 }
@@ -54,7 +54,7 @@
 @mixin m-lbls-btn-style {
   font-size: 0.625rem;
   line-height: 1.25rem;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 // Tablet and Desktop Styles

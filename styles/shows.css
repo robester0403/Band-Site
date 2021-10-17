@@ -77,6 +77,15 @@ a:visited {
   color: #FFFFFF;
 }
 
+.avatar {
+  border-radius: 50%;
+  width: 2.25rem;
+  height: 2.25rem;
+  background-color: #E1E1E1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .top-nav {
   background-color: #323232;
   color: #FFFFFF;
@@ -112,7 +121,7 @@ a:visited {
   }
 }
 .top-nav__link {
-  font-size: 0.875remz;
+  font-size: 0.825remz;
   line-height: 1.375rem;
   font-weight: 600;
   font-size: 1rem;
@@ -165,9 +174,9 @@ a:visited {
   }
 }
 .footer-bar__top-list {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   line-height: 2rem;
-  font-weight: 700;
+  font-weight: 600;
   font-weight: 400;
   display: flex;
   flex-direction: column;
@@ -222,7 +231,7 @@ a:visited {
   text-align: left;
 }
 .footer-bar__bot-card-title {
-  font-size: 0.875remz;
+  font-size: 0.825remz;
   line-height: 1.375rem;
   font-weight: 600;
   padding-bottom: 1rem;
@@ -300,7 +309,7 @@ a:visited {
 }
 .shows-hero__title-album {
   color: #FFFFFF;
-  font-size: 0.875remz;
+  font-size: 0.825remz;
   line-height: 1.375rem;
   font-weight: 600;
   padding: 2.5rem 0 1.5rem 0;
@@ -315,9 +324,9 @@ a:visited {
 }
 .shows-hero__title-band {
   color: #FFFFFF;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   line-height: 2rem;
-  font-weight: 700;
+  font-weight: 600;
   padding: 0rem 0 1.5rem 0;
 }
 @media (min-width: 48rem) {
@@ -330,16 +339,44 @@ a:visited {
 }
 
 .section-heading {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   line-height: 2rem;
-  font-weight: 700;
-  padding: 2rem 0 1rem 0;
+  font-weight: 600;
+  padding: 2rem 1.25rem 1rem 1.25rem;
 }
 
+.shows__card {
+  box-sizing: border-box;
+  border-bottom: 0.1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 0 1.25rem;
+}
 .shows__heading {
+  font-size: 0.625rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  color: #AFAFAF;
+  padding: 1.25rem 0 0.25rem 0;
+}
+.shows__copy {
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 400;
-  color: #AFAFAF;
-  padding: 1.4rem 0 0.5rem 0;
+}
+.shows__button {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #323232;
+  color: #FFFFFF;
+  border-radius: 0.5rem;
+  margin: 0.75rem 0;
+}
+
+.myClass {
+  background-color: red;
+  color: white;
+  font-size: 44px;
 }/*# sourceMappingURL=shows.css.map */

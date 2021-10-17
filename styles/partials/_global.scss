@@ -44,6 +44,14 @@ a {
   }
 }
 
+.avatar {
+  border-radius: 50%;
+  width: 2.25rem;
+  height: 2.25rem;
+  background-color: $mercury;
+  object-fit: cover;
+}
+
 // This is for the top-nav
 .top-nav {
   background-color: $bandsite-black;

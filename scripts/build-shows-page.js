@@ -31,27 +31,6 @@ let shows = [
   },
 ]
 
-
-// create our parent elements (.shows)
-// create our child elements (.shows__heading, .shows__date, .shows__venue, .shows__location, .shows__button)
-// create our parent-child structure for .shows__container
-    // .shows__heading .shows__date .shows__heading .shows__venue
-    //.shows__heading .shows__location .shows__button and APPEND it to .shows__container
-// create our parent-child structure for .shows
-    // .shows__container and APPEND it to .shows
-
-// // Create all elements as below:
-// // create our parent elements (.shows)
-
-
-
-// let showsParent = document.createElement('section');
-// showsParent.classList.add('shows');
-
-// for (let i = 0; i < shows.length; i++)
-// shows[i].date
-
-// create our child elements (.shows__card .shows__heading, .shows__date, .shows__venue, .shows__location, .shows__button)
 function createShowsCard(date, venue, location, parentSelector, i) {
   let showsCard = document.createElement('div');
   showsCard.classList.add(`shows__card`,`card${i}`);
@@ -118,40 +97,31 @@ function createShowsCard(date, venue, location, parentSelector, i) {
   console.log(showsCard);
 }
 
-
-
-// setTimeout(function() {
 for (let i = 0; i < shows.length; i++) {
   createShowsCard(shows[i].date, shows[i].venue, shows[i].location, '.shows', i)
 }
-// }, 2000)
 
-// let parent = document.querySelector('shows');
-// parent.appendChild(showsParent);
-// console.log(showsParent)
-
-// !!make into a function
+// make this into a loop somehow..
 document.querySelector(`.card0`).addEventListener('click', () => {
-  document.querySelector(`.card0`).classList.add('showsHighlight');
+  document.querySelector(`.card0`).classList.toggle('showsHighlight');
 }); 
 
 document.querySelector(`.card1`).addEventListener('click', () => {
-  document.querySelector(`.card1`).classList.add('showsHighlight');
+  document.querySelector(`.card1`).classList.toggle('showsHighlight');
 }); 
 
 document.querySelector(`.card2`).addEventListener('click', () => {
-  document.querySelector(`.card2`).classList.add('showsHighlight');
+  document.querySelector(`.card2`).classList.toggle('showsHighlight');
 }); 
 
 document.querySelector(`.card3`).addEventListener('click', () => {
-  document.querySelector(`.card3`).classList.add('showsHighlight');
+  document.querySelector(`.card3`).classList.toggle('showsHighlight');
 }); 
 
 document.querySelector(`.card4`).addEventListener('click', () => {
-  document.querySelector(`.card4`).classList.add('showsHighlight');
+  document.querySelector(`.card4`).classList.toggle('showsHighlight');
 }); 
 
 document.querySelector(`.card5`).addEventListener('click', () => {
-  document.querySelector(`.card5`).classList.add('showsHighlight');
+  document.querySelector(`.card5`).classList.toggle('showsHighlight');
 }); 
-// add class and id to shows__card line 

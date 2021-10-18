@@ -1,12 +1,4 @@
-// let commentForm = document.querySelector('.comment-form');
-
-// submit event without refreshing
-// commentForm.addEventListener('submit', (event) => {
-//   event.preventDefault();
-// });
-// remindersContainer = c
-
-let commentsContainer = document.querySelector('.comments-container');
+let commentsContainer = document.querySelector('.comments__container');
 
 const comments = [
   {
@@ -25,27 +17,10 @@ const comments = [
     msg: 'This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.',
   }
 ];
-
-
-
+// This is the DOM that builds the comment HTML
 const showComment = (comments) => {
-  // <div class="comments">
-    // <div class="comments__flex-container"> <--flex here
-        // <div class="comments__left">
-          // <aside class="comment__avatar"></aside>
-        // </div>
-        // <div class="comments__right">
-          // <h4 class="comments__name"></h4>
-        //   <h4 class="comments__date"></h4>
-        //   <h4 class="comments__msg"></h4>
-        // <div>
-    // </div>
-  // </div>
   const commentsE1 = document.createElement('div');
   commentsE1.classList.add('comments');
-
-  // const flxctnrE1 = document.createElement('div');
-  // flxctnrE1.classList.add('comments__flxctner');
 
   const avatarE1 = document.createElement('aside');
   avatarE1.classList.add('comments__avatar');
@@ -68,20 +43,17 @@ const showComment = (comments) => {
   msgE1.classList.add('comments__msg');
   msgE1.innerText = comments.msg;
 
-
   leftE1.appendChild(avatarE1);
   rightE1.appendChild(nameE1);
   rightE1.appendChild(dateE1);
   rightE1.appendChild(msgE1);
-  // flxctnrE1.appendChild(leftE1);
-  // flxctnrE1.appendChild(rightE1);
 
   commentsE1.appendChild(leftE1);
   commentsE1.appendChild(rightE1);
   
   commentsContainer.appendChild(commentsE1);
 }
-
+// This reads the comments in the array
 comments.forEach((comments) => {
   showComment(comments);
 });
@@ -90,7 +62,20 @@ const commentForm = document.querySelector('.comment__form');
 
 commentForm.addEventListener('submit', (event) => {
   event.preventDefault();
-
+// validator
+  let x = document.forms["commentForm"]["name"].value;
+  if (x == "" || x == "Enter your name") {
+    alert("You must enter a name");
+    document.querySelector(`.comment__form-input`).classList.add('commentError');
+    return false;
+  }
+  let y = document.forms["commentForm"]["msg"].value;
+  if (y == "" || y == "Add a new comment") {
+    alert("You must enter a comment");
+    document.querySelector(`.comment__form-msg`).classList.add('commentError');
+    return false;
+  }
+// Define the values for the form
   const newForm = {
     name: event.target.name.value,
     date: getFormattedDate(),
@@ -99,8 +84,7 @@ commentForm.addEventListener('submit', (event) => {
 
   comments.unshift(newForm);
   commentsContainer.innerHTML = '';
-// This should be ok? because it has been passed into text at this point
-
+// Limit to only 3 comments
   for (let i = 0; i < 3; i++) {
     showComment(comments[i]);
   }
@@ -113,3 +97,4 @@ function getFormattedDate() {
 
   return `${currentDate.getMonth() + 1}/${currentDate.getDate()}/${currentDate.getFullYear()}`;
 }
+

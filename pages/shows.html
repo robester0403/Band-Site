@@ -11,21 +11,25 @@
 <!-- This will be the top-nav-->
 <header class="header">
   <nav class="top-nav">
-    <div class="top-nav__logo">
-      BANDSITE
-    </div>
-    <div class="top-nav__list">
-      <h3 class="top-nav__link">
+    <section class="top-nav__container"> 
+      <div class="top-nav__logo">
         <a href="../index.html" alt="link to index page">
-          Biography
+          <img src="../assets/logos/Logo-bandsite.svg" alt="logo">
         </a>
-      </h3>
-      <h3 class="top-nav__link">
-        <a href="./shows.html" alt="link to shows page">
-          Shows
-        </a>
-      </h3>
-    </div>
+      </div>
+      <div class="top-nav__list">
+        <h3 class="top-nav__link">
+          <a href="../index.html" alt="link to index page">
+            Biography
+          </a>
+        </h3>
+        <h3 class="top-nav__link">
+          <a href="./shows.html" alt="link to shows page">
+            Shows
+          </a>
+        </h3>
+      </div>
+    </section>
   </nav>
 </header>
 <!-- start of main section -->
@@ -45,11 +49,11 @@
             For The Stings
           </div>
         </h1>
-
       </div>
-      <div>
+<!-- iframe -->
+      <div class="shows-hero__song">
         <!-- find a better way to store iframe -->
-        <iframe width="100%" height="125" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/212663643&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+        <iframe width="100%" height="125" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/212663643&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false">
         </iframe>
         <div style="font-size: 8px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
           <a href="https://soundcloud.com/scavengerhunt" title="Scavenger Hunt" target="_blank" style="color: #cccccc; text-decoration: none;">
@@ -63,12 +67,25 @@
       </div>
     </div>
   </section>
-<!-- This will be the main of shows pages -->
-  <section>
+
+
+  <!-- This will be the main of shows pages -->
+  <section class="shows__wrapper">
     <h1 class="section-heading">
       Shows
     </h1>
     <article class="shows">
+      <div class="shows__card-tab-headers">
+        <div class="shows__tab-heading">
+          DATE
+        </div>
+        <div class="shows__tab-heading">
+          VENUE
+        </div>
+        <div class="shows__tab-heading">
+          LOCATION
+        </div>
+      </div>
     </article>
   </section>
   
@@ -77,107 +94,111 @@
 <!-- This will be the footer -->
 <!-- Top part of responsive footer -->
 <footer class="footer-bar">
-  <div class="footer-bar__top-list">
-    <div class="footer-bar__top-list-item">
-      Get in Touch
-    </div>
-    <div class="footer-bar__top-list-item">
-      <section>
-        <a href="https://www.instagram.com/">
-          <img src="../assets/icons/Icon-instagram.svg" alt="instagram image" class="footer-bar__top-list-item-icon"/>
-        </a>
-        <a href="https://www.facebook.com/">
-          <img src="../assets/icons/Icon-facebook.svg" alt="facebook image" class="footer-bar__top-list-item-icon"/>
-        </a>
-        <a href="https://www.twitter.com/">
-          <img src="../assets/icons/Icon-twitter.svg" alt="twitter image" class="footer-bar__top-list-item-icon"/>
-        </a>
-      </section>
-    </div>
-  </div>
-<!-- Bottom part of responsive footer -->
-  <div class="footer-bar__bot-list">
-    <div class="footer-bar__bot-card">
-      <div class="footer-bar__bot-card-title">
-        <h4>
-          Cam Adams
-        </h4>
-        <h4>
-          The Bees Knees Management
-        </h4>
+  <div class="footer-bar__wrapper">
+    <div class="footer-bar__top-list">
+      <div class="footer-bar__top-list-item">
+        Get in Touch
       </div>
-      <div class="footer-bar__bot-card-copy">
-        <h5>
-          503 Broadway Penthouse,
-        </h5>
-        <h5>
-          New York, NY 10012, USA
-        </h5>
-      </div>
-      <div class="footer-bar__bot-card-copy">
-        <h5>
-          <a href="mailto:info@thebeesknees.com" alt="mail to Cam Adams">
-            info@thebeesknees.com
+      <div class="footer-bar__top-list-item">
+        <section>
+          <a href="https://www.instagram.com/">
+            <img src="../assets/icons/Icon-instagram.svg" alt="instagram image" class="footer-bar__top-list-item-icon"/>
           </a>
-        </h5>
-      </div>
-    </div>
-    <div class="footer-bar__bot-card">
-      <div class="footer-bar__bot-card-title">
-        <h4>
-          Pearl Gregg
-        </h4>
-        <h4>
-          Limitless Artist Group
-        </h4>
-      </div>
-      <div class="footer-bar__bot-card-copy">
-        <h5>
-          Booking Agent for
-        </h5>
-        <h5>
-          US / South America / Japan
-        </h5>
-      </div>
-      <div class="footer-bar__bot-card-copy">
-        <h5>
-          <a href="mailto:pearl.gregg@limitlessag.com" alt="mail to Pearl Gregg">
-            pearl.gregg@limitlessag.com
+          <a href="https://www.facebook.com/">
+            <img src="../assets/icons/Icon-facebook.svg" alt="facebook image" class="footer-bar__top-list-item-icon"/>
           </a>
-        </h5>
-      </div>
-    </div>
-    <div class="footer-bar__bot-card">
-      <div class="footer-bar__bot-card-title">
-        <div>
-          Carson Whyte
-        </div>
-        <div>
-          ARCH Entertainment
-        </div>
-      </div>
-      <div class="footer-bar__bot-card-copy">
-        <div>
-          Booking Agent for
-        </div>
-        <div>
-          UK / EU / AU
-        </div>
-      </div>
-      <div class="footer-bar__bot-card-copy">
-        <h5>
-          <a href="mailto:cwhyte@archentertainment.com" alt="mail to Carson Whyte">
-            cwhyte@archentertainment.com
+          <a href="https://www.twitter.com/">
+            <img src="../assets/icons/Icon-twitter.svg" alt="twitter image" class="footer-bar__top-list-item-icon"/>
           </a>
-        </h5>
+        </section>
       </div>
     </div>
-  </div>
-  <div class="endlogo">
-    BANDSITE
-  </div>
-  <div class="footer-bar__copyright">
-    Copyright The Bees Knees © 2021 All Rights Reserved
+    <!-- Bottom part of responsive footer -->
+    <div class="footer-bar__bot-list">
+      <div class="footer-bar__bot-card">
+        <div class="footer-bar__bot-card-title">
+          <h4>
+            Cam Adams
+          </h4>
+          <h4>
+            The Bees Knees Management
+          </h4>
+        </div>
+        <div class="footer-bar__bot-card-copy">
+          <h5>
+            503 Broadway Penthouse,
+          </h5>
+          <h5>
+            New York, NY 10012, USA
+          </h5>
+        </div>
+        <div class="footer-bar__bot-card-copy">
+          <h5>
+            <a href="mailto:info@thebeesknees.com" alt="mail to Cam Adams">
+              info@thebeesknees.com
+            </a>
+          </h5>
+        </div>
+      </div>
+      <div class="footer-bar__bot-card">
+        <div class="footer-bar__bot-card-title">
+          <h4>
+            Pearl Gregg
+          </h4>
+          <h4>
+            Limitless Artist Group
+          </h4>
+        </div>
+        <div class="footer-bar__bot-card-copy">
+          <h5>
+            Booking Agent for
+          </h5>
+          <h5>
+            US / South America / Japan
+          </h5>
+        </div>
+        <div class="footer-bar__bot-card-copy">
+          <h5>
+            <a href="mailto:pearl.gregg@limitlessag.com" alt="mail to Pearl Gregg">
+              pearl.gregg@limitlessag.com
+            </a>
+          </h5>
+        </div>
+      </div>
+      <div class="footer-bar__bot-card">
+        <div class="footer-bar__bot-card-title">
+          <div>
+            Carson Whyte
+          </div>
+          <div>
+            ARCH Entertainment
+          </div>
+        </div>
+        <div class="footer-bar__bot-card-copy">
+          <div>
+            Booking Agent for
+          </div>
+          <div>
+            UK / EU / AU
+          </div>
+        </div>
+        <div class="footer-bar__bot-card-copy">
+          <h5>
+            <a href="mailto:cwhyte@archentertainment.com" alt="mail to Carson Whyte">
+              cwhyte@archentertainment.com
+            </a>
+          </h5>
+        </div>
+      </div>
+    </div>
+    <div class="endlogo">
+      <a href="../index.html" alt="link to index page">
+        <img src="../assets/logos/Logo-bandsite.svg" alt="logo">
+      </a>
+    </div>
+    <div class="footer-bar__copyright">
+      Copyright The Bees Knees © 2021 All Rights Reserved
+    </div>
   </div>
 </footer>
 

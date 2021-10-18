@@ -14,79 +14,159 @@
   display: flex;
   align-items: center;   
   flex-direction: column;
+  justify-content: center;
   // need to double check BP's
+
   @include tablet {
-    height: 25rem;
+    height: 32rem;
+  }
+
+  @include desktop {
+    height: 36rem;
   }
 
   &__container {
     padding: 0 1rem;
-    width: 90%;
+    width: 92%;
+    display: flex;
+    flex-direction: column;
+    
+    @include desktop {
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
   }
   &__title-album {
     color: $white;
     @include m-subhd-style;
-    padding: 2.5rem 0 1.5rem 0;
+    padding: 2.5rem 0 1rem 0;
 
     @include tablet {
-      @include dt-pg-hdr-style;
-      padding-left: 2.25rem;
-    }
+      @include dt-subhd-style;
+      font-weight: 600;
+    } 
   }
 
   &__title-band {
     color: $white;
     @include m-sec-hdr-style;
-    padding: 0rem 0 1.5rem 0;
+    padding-bottom: 1.25rem;
 
     @include tablet {
       @include dt-pg-hdr-style;
-      padding-left: 2.25rem;
+      font-weight: 600;
+      padding-bottom: 2rem;
     }
-
+  }
+  
+  &__song {
+    width: 25rem;
+    margin: auto 0;
   }
 }
 
 .section-heading {
   @include m-sec-hdr-style;
   padding: 2rem 1.25rem 1rem 1.25rem;
+
+  @include desktop {
+    padding: 2rem 4.5rem 1rem 0;
+  }
 }
 
 .shows {
-  
-  &__card{
-    box-sizing: border-box;
-    border-bottom: 0.1rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-    padding: 0 1.25rem;
+  width: 100%;
+
+  &__wrapper {
+    width: 46rem;
+    margin: 0 auto 2rem auto;
+
+    @include desktop {
+      display: flex;
+      width: 70rem;
+    }
   }
 
-  // &__sub-card {
+  &__card-tab-headers{
+  display: none;
 
-  // }
+    @include tablet {
+      display: flex;
+      box-sizing: border-box;
+      padding: 2.5rem 1.25rem 0 1.25rem;
+    }
+  }
+
+  &__tab-heading {
+    color: $silver;
+    width: 25%;
+    @include dt-lbls-btn-style;
+    font-weight: 400;
+  }
+
+  &__card {
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 0 1.25rem;
+
+    &:hover {
+      background-color: $alabaster;
+    }
+
+    @include tablet {
+      display:flex;
+    }
+  }
+
+  &__sub-card {
+      width: 25%;
+      margin: auto 0;
+  }
 
   &__heading {
     @include m-lbls-btn-style;
     color: $silver;
     padding: 1.25rem 0 0.25rem 0;
+
+    @include tablet {
+      display: none
+    }
   }
 
   &__copy {
-    @include m-bdy-copy-style
+    @include m-bdy-copy-style;
   }
+
+    @include tablet {
+      @include dt-bdy-copy-style;
+    }
 
   &__button {
     @include m-bdy-copy-style;
     text-align: center;
     padding: 1rem 0;
     background-color: $bandsite-black;
-    color: $white;
-    border-radius: 0.5rem;
+    color: $silver;
+    border-radius: 4px;
     margin: 0.75rem 0;
+    width: 100%;
+    
+    &:hover {
+      background-color: $bandsite-darkblack;
+    }
+
+    &:active {
+      color: $white;
+    }
+
+    @include tablet {
+      @include dt-lbls-btn-style;
+      font-size: 1rem;
+      width: 12rem;
+    }
   }
 }
 
 .showsHighlight {
   background-color: $mercury;
-  font-size: 44px;
 }

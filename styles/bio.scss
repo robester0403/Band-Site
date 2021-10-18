@@ -13,17 +13,25 @@
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
-  align-items: center;   
-
+  align-items: center; 
+  
   @include tablet {
-    height: 25rem;
+    height: 32rem;
+  }
+
+  @include desktop {
+    height: 36rem;
+  }
+
+  &__container {
+    width: 80rem;
+    margin: 0 auto;
   }
 
   &__title {
     color: $white;
     @include m-pg-hdr-style;
     padding-left: 1rem;
-
 
     @include tablet {
       @include dt-pg-hdr-style;
@@ -37,21 +45,23 @@
 
   &__container {
     padding: 0 1rem;
+    max-width: 80rem;
+    margin: 0 auto;
 
     @include tablet {
-      padding: 0 6rem;
+      padding: 0 5rem;
     }
 
     @include desktop{
-      padding: 0 15rem;
+      padding: 0 13rem;
     }
-
-
   }
 
   &__title {
     @include m-pg-hdr-style;
     padding: 1.5rem 0 1rem 1rem;
+    max-width: 80rem;
+    margin: 0 auto;
 
     @include tablet {
       @include dt-sec-hdr-style;
@@ -59,7 +69,7 @@
     }
 
     @include desktop {
-      padding: 3rem 0 2.25rem 10rem;
+      padding: 3rem 0 2.25rem 0rem;
     }
   }
 
@@ -144,10 +154,14 @@
   }
 }
 
-
 .photo {
   background-color: $alabaster;
   padding: 0 1rem;
+
+  @include tablet {
+    max-width: 75em;
+    margin: 0 auto;
+  }
 
   &__title {
     @include m-sec-hdr-style;
@@ -189,7 +203,12 @@
   &__container{
   display: flex;
   @include bot-border;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.5rem;
+    
+    @include tablet {
+      width: 40rem;
+      margin: 0 auto;
+    }
   }
 
   &__avatar {
@@ -199,15 +218,22 @@
     background-color: $mercury;
     object-fit: cover;
     margin: 1rem 0.5rem;
+
+    @include tablet {
+      width: 3rem;
+      height: 3rem;
+    }
   }
 
   &__title {
     @include m-sec-hdr-style;
-    padding: 1rem 0;
+    padding: 0 0 1rem 0;
 
     @include tablet {
       @include dt-sec-hdr-style;
-      padding: 3rem 0 2.25rem 0;
+      padding: 2rem 0 2.25rem 0;
+      max-width: 80rem;
+      margin: 0 auto;
     }
   }
 
@@ -226,23 +252,58 @@
 
   &__form-input {
     @include m-bdy-copy-style;
+    @include form-border;
     padding: 0.5rem;
     margin-bottom: 1.5rem;
+    border-radius: 4px;
+
+    &:active {
+      @include form-border-active;
+    }
+
+    &:invalid {
+      @include form-border-invalid;
+    }
+
+    @include tablet{
+      @include dt-bdy-copy-style;
+    }
   }
 
   &__form-msg {
     @include m-bdy-copy-style;
+    @include form-border;
     padding: 0.5rem;
     height: 5rem;
+    border-radius: 4px;
+
+    @include tablet{
+      @include dt-bdy-copy-style;
+    }
   }
 
   &__form-submit {
     @include m-lbls-btn-style;
     background-color: $bandsite-black;
-    color: $white;
-    padding: 1rem;
-    border-radius: 0.5rem;
+    color: $silver;
+    padding: .75rem 2rem;
+    border-radius: 4px;
     margin: 1.25rem 0 1.25rem 0;
+  
+    &:hover {
+      background-color: $bandsite-darkblack;
+    }
+
+    &:active {
+      color: $white;
+    }
+
+    @include tablet {
+      @include dt-lbls-btn-style;
+      font-size: 1rem;
+      width: 12rem;
+      margin-left: auto;
+    }
   }
 }
 
@@ -251,6 +312,12 @@
   @include bot-border;
   padding-bottom: 0.5rem;
 
+  &__container {
+    @include tablet {
+      width: 40rem;
+      margin: 0 auto;
+    }
+  }
   &__left {
     padding: 0 0.5rem 0 0;
   }
@@ -262,6 +329,11 @@
     background-color: $mercury;
     object-fit: cover;
     margin: 1rem 0.5rem;
+
+    @include tablet {
+      width: 3rem;
+      height: 3rem;
+    }
   }
 
   &__right {
@@ -273,22 +345,40 @@
 
   &__name {
     @include m-bdy-copy-style;
-    font-weight: 600;
+    font-weight: 700;
     padding: 0.75rem 0;
+    width: 60%;
+
+    @include tablet{
+      @include dt-bdy-copy-style;
+      font-weight: 600;
+    }
   }
 
   &__date {
     @include m-bdy-copy-style;
     font-weight: 400;
     padding: 0.75rem 0;
+    width: 38%;
+    text-align: right;
     color: $silver;
+
+    @include tablet{
+      @include dt-bdy-copy-style;
+    }
   }
 
   &__msg {
     @include m-bdy-copy-style;
     font-weight: 300;
-    
+
+    @include tablet{
+      @include dt-bdy-copy-style;
+    }
   }
 }
 
+.commentError {
+  @include form-border-invalid
+}
 

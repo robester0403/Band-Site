@@ -57,10 +57,15 @@ a {
   background-color: $bandsite-black;
   color: $white;
 
-  @include tablet {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+  &__container{
+    max-width: 70rem;
+    margin: 0 auto;
+
+    @include tablet {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
   }
 
   &__logo {
@@ -130,6 +135,10 @@ a {
     padding: 3rem 2.25rem 2.25rem 2.25rem;
   }
   
+  &__wrapper{
+    max-width: 72rem;
+    margin: 0 auto; 
+  }
 
   &__top-list {
     @include m-pg-hdr-style;
@@ -221,6 +230,6 @@ a {
   @include tablet {
   position: absolute;
   top: 9%;
-  right: 2.5%;
+  right: 10%;
   }
 } 

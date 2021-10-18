@@ -35,7 +35,7 @@
 }
 
 @mixin m-subhd-style {
-  font-size: 0.825remz;
+  font-size: 1rem;
   line-height: 1.375rem;
   font-weight: 600;
 }
@@ -97,4 +97,16 @@
 
 @mixin bot-border {
   border-bottom: 0.1rem solid $mercury;
+}
+
+@mixin form-border {
+  border: 1px solid $mercury;
+}
+
+@mixin form-border-active {
+  border: 1px solid $bandsite-darkblack;
+}
+
+@mixin form-border-invalid {
+  border: 1px solid #D22D2D;
 }

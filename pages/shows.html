@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../styles/shows.css">
   <title>Robert Metal'040s Band Site</title>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://project-1-api.herokuapp.com/" type="text/javascript"></script>
 </head>
 <body>
 <!-- This will be the top-nav-->
@@ -51,25 +53,14 @@
         </h1>
       </div>
 <!-- iframe -->
-      <div class="shows-hero__song">
         <!-- find a better way to store iframe -->
-        <iframe width="100%" height="125" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/212663643&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false">
-        </iframe>
-        <div style="font-size: 8px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
-          <a href="https://soundcloud.com/scavengerhunt" title="Scavenger Hunt" target="_blank" style="color: #cccccc; text-decoration: none;">
-            Scavenger Hunt
-          </a> 
-            · 
-          <a href="https://soundcloud.com/scavengerhunt/wildfire-bees-knees-remix-1" title="Wildfire (Bee&#x27;s Knees Remix)" target="_blank" style="color: #cccccc; text-decoration: none;">
-            Wildfire (Bee&#x27;s Knees Remix)
-          </a>
-        </div>
+      <iframe width="100%" height="125" scrolling="no" frameborder="no" allow="autoplay"  class="shows-hero__song" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/212663643&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false">
+      </iframe>
+      <div style="font-size: 8px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
       </div>
     </div>
   </section>
-
-
-  <!-- This will be the main of shows pages -->
+<!-- This will be the main of shows pages -->
   <section class="shows__wrapper">
     <h1 class="section-heading">
       Shows
@@ -88,8 +79,6 @@
       </div>
     </article>
   </section>
-  
-
 </main>
 <!-- This will be the footer -->
 <!-- Top part of responsive footer -->

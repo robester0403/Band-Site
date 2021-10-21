@@ -115,7 +115,10 @@ let showsContainer = document.querySelector('.shows');
 
 function createShowsCard(showsdates) {
   let showsCard = document.createElement('div');
-  showsCard.classList.add(`shows__card`,`card${i}`);
+  showsCard.classList.add(`shows__card`);
+  showsCard.addEventListener('click', () =>  {
+    showsCard.classList.toggle('showsHighlight');
+  });
   
   let showsSubCard1 = document.createElement('div');
   showsSubCard1.classList.add('shows__sub-card');
@@ -182,26 +185,18 @@ function createShowsCard(showsdates) {
 axios.get(getShowdatesEndpoint)
   .then(showsdata => {
     console.log(showsdata.data);
-    i = 0;
   showsdata.data.forEach(entry => {
-    console.log(Date(entry.date));
-    console.log(entry.place);
-    console.log(entry.location);
     createShowsCard(entry);
-    createHighlights(entry); 
-    console.log(createShowsCard(entry));
-    i = i + 1;
   });
 });
 
-function createHighlights(entry) {
-  console.log(i);
-  console.log(`.card${i}`);
-  console.log('showsHighlight');
-  document.querySelector(`.card${i}`).addEventListener('click', () => {
-  document.querySelector(`.card${i}`).classList.toggle('showsHighlight');
-  }); 
-}
+// function createHighlights(entry) {
+//   console.log(i);
+//   console.log(`.card${i}`);
+//   console.log('showsHighlight');
+
+//   }); 
+// }
 
 
   // for (let i = 0; i < showsdata.length; i++) {

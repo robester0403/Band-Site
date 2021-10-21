@@ -50,9 +50,7 @@
         About the Musicians
       </h1>
         <div class="main__container">
-          <div class="main__image-container">
             <img src="assets/images/band.jpg" alt="main band image" class="main__image"/>
-          </div>
           <h3 class="main__quote">
             “We push each other to be the best. It’s not uncommon for one of us to say ‘this needs to be better, back to the drawing board’”
           </h3>
@@ -96,24 +94,31 @@
       </div>
     </section>
 <!-- This will the comments section -->
+
+
     <section class="comment__wrap">
       <h1 class="comment__title">
         Join the Conversation
       </h1>
       <article class="comment__container">
         <img src="./assets/images/Mohan-muruge.jpg" class="comment__avatar">
-        <form class="comment__form" name="commentForm" onsubmit="return validateForm()">
+
+
+        <form class="comment__form" action="https://project-1-api.herokuapp.com/post?api_key=d1daf4f6-fa47-46b2-98bb-af3e6eb40688" method="post" name="commentForm">
           <label class="comment__form-label" for="name">NAME</label>
           <input class="comment__form-input" type="text" onfocus="this.value=''" name="name" value="Enter your name" />
-          <label class="comment__form-label" for="msg">COMMENT</label>
-          <textarea class="comment__form-msg" onfocus="this.value=''" name="msg">Add a new comment</textarea>
+          <label class="comment__form-label" for="comment">COMMENT</label>
+          <textarea class="comment__form-comment" onfocus="this.value=''" name="comment">Add a new comment</textarea>
           <input class="comment__form-submit" type="submit" name="submit" value="COMMENT" />
-<!-- <p class="comment__form-message"></p> -->
         </form>
+
+
       </article>
     <article class="comments__container"></article>
     </section>
   </main>
+
+
 <!-- This will be the footer -->
 <!-- Top part of responsive footer -->
   <footer class="footer-bar">

@@ -269,7 +269,7 @@
     }
   }
 
-  &__form-msg {
+  &__form-comment {
     @include m-bdy-copy-style;
     @include form-border;
     padding: 0.5rem;
@@ -367,7 +367,7 @@
     }
   }
 
-  &__msg {
+  &__comment {
     @include m-bdy-copy-style;
     font-weight: 300;
 

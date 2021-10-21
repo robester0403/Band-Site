@@ -27,8 +27,7 @@ h4 {
 
 h5 {
   margin: 0;
-  font-size: initial;
-  font-weight: initial;
+
 }
 
 a {
@@ -156,12 +155,16 @@ a {
   }
 
   &__top-list-item {
+    @include m-sec-hdr-style;
+    font-weight: 600;
     width: 11rem;
     padding: 0 1rem 1rem 0;
     display: flex;
     justify-content: flex-start;
+    margin: 0;
 
     @include tablet {
+      @include dt-sec-hdr-style;
       width: fit-content;
       padding: 0 2.25rem 2.25rem 0;
     }

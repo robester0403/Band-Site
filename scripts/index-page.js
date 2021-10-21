@@ -8,8 +8,8 @@ const postCommentsEndpoint = `https://project-1-api.herokuapp.com/comments${API_
 
 // Display the data in the below target container
 let commentsContainer = document.querySelector('.comments__container');
-// showComment is the DOM function for creating the HTML to plug into our site
-const showComment = (comments) => {
+// displayComment is the DOM function for creating the HTML to plug into our site
+const displayComment = (comments) => {
   const commentsE1 = document.createElement('div');
   commentsE1.classList.add('comments');
 
@@ -52,10 +52,10 @@ const showComment = (comments) => {
 axios.get(getCommentsEndpoint)
   .then(result => {
     console.log(result.data);
-// DOM generate the comments with showComment
+// DOM generate the comments with displayComment
     result.data.forEach(entry => {
 
-      showComment(entry);
+      displayComment(entry);
     });
   });
 
@@ -64,7 +64,6 @@ axios.get(getCommentsEndpoint)
 
 // This is just for form submit
 const commentForm = document.querySelector('.comment__form');
-
 
 // axios.all([axiosrequest1, axiosrequest2, axiosrequest3])
 commentForm.addEventListener('submit', function(event) {
@@ -98,7 +97,7 @@ commentForm.addEventListener('submit', function(event) {
 //   commentsContainer.innerHTML = '';
 // // expand to all comments in the array!! but For Each should already do that above
 //   // for (let i = 0; i < comments; i++) {
-//   //   showComment(comments[i]);
+//   //   displayComment(comments[i]);
 //   // }
 
 //   //this just resets the form

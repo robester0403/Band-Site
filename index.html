@@ -50,7 +50,7 @@
         About the Musicians
       </h1>
         <div class="main__container">
-            <img src="assets/images/band.jpg" alt="main band image" class="main__image"/>
+          <img src="assets/images/band.jpg" alt="main band image" class="main__image"/>
           <h3 class="main__quote">
             “We push each other to be the best. It’s not uncommon for one of us to say ‘this needs to be better, back to the drawing board’”
           </h3>
@@ -74,11 +74,11 @@
     </section>
 <!-- This will be the photo gallery -->
     <section>
-      <div class="photo">
+      <article class="photo">
         <h1 class="photo__title">
           Photo Gallery
         </h1>
-        <article>
+        <div>
           <div class="photo__container">
               <img src="assets/images/Photo-gallery-1.jpg" alt="event image 1" class="photo__image"/>
               <img src="assets/images/Photo-gallery-2.jpg" alt="event image 2" class="photo__image"/>
@@ -90,20 +90,16 @@
               <img src="assets/images/Photo-gallery-8.jpg" alt="event image 8" class="photo__image"/>
               <img src="assets/images/Photo-gallery-9.jpg" alt="event image 9" class="photo__image"/>
           </div>
-        </article>
-      </div>
+        </div>
+      </article>
     </section>
 <!-- This will the comments section -->
-
-
     <section class="comment__wrap">
       <h1 class="comment__title">
         Join the Conversation
       </h1>
       <article class="comment__container">
         <img src="./assets/images/Mohan-muruge.jpg" class="comment__avatar">
-
-
         <form class="comment__form" action="https://project-1-api.herokuapp.com/post?api_key=d1daf4f6-fa47-46b2-98bb-af3e6eb40688" method="post" name="commentForm">
           <label class="comment__form-label" for="name">NAME</label>
           <input class="comment__form-input" type="text" onfocus="this.value=''" name="name" value="Enter your name" />
@@ -111,22 +107,19 @@
           <textarea class="comment__form-comment" onfocus="this.value=''" name="comment">Add a new comment</textarea>
           <input class="comment__form-submit" type="submit" name="submit" value="COMMENT" />
         </form>
-
-
       </article>
-    <article class="comments__container"></article>
+    <article class="comments__container">
+    </article>
     </section>
   </main>
-
-
 <!-- This will be the footer -->
 <!-- Top part of responsive footer -->
   <footer class="footer-bar">
     <div class="footer-bar__wrapper">
       <div class="footer-bar__top-list">
-        <div class="footer-bar__top-list-item">
+        <h2 class="footer-bar__top-list-item">
           Get in Touch
-        </div>
+        </h2>
         <div class="footer-bar__top-list-item">
           <section>
             <a href="https://www.instagram.com/">
@@ -160,13 +153,11 @@
               New York, NY 10012, USA
             </h5>
           </div>
-          <div class="footer-bar__bot-card-copy">
-            <h5>
-              <a href="mailto:info@thebeesknees.com" alt="mail to Cam Adams">
-                info@thebeesknees.com
-              </a>
-            </h5>
-          </div>
+          <h5 class="footer-bar__bot-card-copy">
+            <a href="mailto:info@thebeesknees.com" alt="mail to Cam Adams">
+              info@thebeesknees.com
+            </a>
+          </h5>
         </div>
         <div class="footer-bar__bot-card">
           <div class="footer-bar__bot-card-title">
@@ -185,13 +176,11 @@
               US / South America / Japan
             </h5>
           </div>
-          <div class="footer-bar__bot-card-copy">
-            <h5>
-              <a href="mailto:pearl.gregg@limitlessag.com" alt="mail to Pearl Gregg">
-                pearl.gregg@limitlessag.com
-              </a>
-            </h5>
-          </div>
+          <h5 class="footer-bar__bot-card-copy">
+            <a href="mailto:pearl.gregg@limitlessag.com" alt="mail to Pearl Gregg">
+              pearl.gregg@limitlessag.com
+            </a>
+          </h5>
         </div>
         <div class="footer-bar__bot-card">
           <div class="footer-bar__bot-card-title">
@@ -210,13 +199,11 @@
               UK / EU / AU
             </div>
           </div>
-          <div class="footer-bar__bot-card-copy">
-            <h5>
+          <h5 class="footer-bar__bot-card-copy">
               <a href="mailto:cwhyte@archentertainment.com" alt="mail to Carson Whyte">
                 cwhyte@archentertainment.com
               </a>
-            </h5>
-          </div>
+          </h5>
         </div>
       </div>
       <div class="endlogo">

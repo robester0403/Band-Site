@@ -114,22 +114,22 @@ const postCommentsEndpoint = `https://project-1-api.herokuapp.com/comments${API_
 let showsContainer = document.querySelector('.shows');
 
 function createShowsCard(showsdates) {
-  let showsCard = document.createElement('div');
+  let showsCard = document.createElement('ul');
   showsCard.classList.add(`shows__card`);
   showsCard.addEventListener('click', () =>  {
     showsCard.classList.toggle('showsHighlight');
   });
   
-  let showsSubCard1 = document.createElement('div');
+  let showsSubCard1 = document.createElement('li');
   showsSubCard1.classList.add('shows__sub-card');
 
-  let showsSubCard2 = document.createElement('div');
+  let showsSubCard2 = document.createElement('li');
   showsSubCard2.classList.add('shows__sub-card');
 
-  let showsSubCard3 = document.createElement('div');
+  let showsSubCard3 = document.createElement('li');
   showsSubCard3.classList.add('shows__sub-card');
 
-  let showsSubCard4 = document.createElement('div');
+  let showsSubCard4 = document.createElement('li');
   showsSubCard4.classList.add('shows__sub-card');
 
   let showsHeadingDate = document.createElement('h5');

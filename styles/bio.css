@@ -62,8 +62,6 @@ h4 {
 
 h5 {
   margin: 0;
-  font-size: initial;
-  font-weight: initial;
 }
 
 a {
@@ -201,13 +199,21 @@ a:visited {
   }
 }
 .footer-bar__top-list-item {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 600;
+  font-weight: 600;
   width: 11rem;
   padding: 0 1rem 1rem 0;
   display: flex;
   justify-content: flex-start;
+  margin: 0;
 }
 @media (min-width: 48rem) {
   .footer-bar__top-list-item {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;

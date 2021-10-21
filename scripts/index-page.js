@@ -1,5 +1,5 @@
 
-const API_KEY_STRING = "?api_key=d1daf4f6-fa47-46b2-98bb-af3e6eb40688";
+const API_KEY_STRING = "?api_key=1f1af60a-45c0-4cd3-a5fc-abda06f43bb6";
 
 const getCommentsEndpoint = `https://project-1-api.herokuapp.com/comments${API_KEY_STRING}`;
 const getShowdatesEndpoint = `https://project-1-api.herokuapp.com/showdates${API_KEY_STRING}`;
@@ -28,7 +28,7 @@ const displayComment = (comments) => {
 
   const dateE1 = document.createElement('h4');
   dateE1.classList.add('comments__date');
-  dateE1.innerText = Date(comments.timestamp);
+  dateE1.innerText = getFormattedDate(comments.timestamp);
 
   const commentE1 = document.createElement('h4');
   commentE1.classList.add('comments__comment');
@@ -45,20 +45,31 @@ const displayComment = (comments) => {
   commentsContainer.appendChild(commentsE1);
 }
 
+function getFormattedDate() {
+  const currentDate = new Date();
 
-// get comments
+  return `${currentDate.getMonth() + 1}/${currentDate.getDate()}/${currentDate.getFullYear()}`;
+}
 
 
 axios.get(getCommentsEndpoint)
   .then(result => {
-    console.log(result.data);
+    sortedArrayByTime = result.data
+    sortedArrayByTime.reverse(function(object1, object2) {
+    var timevar1 = new Date(object1.updated_at),
+      timevar2 = new Date(object2.updated_at);
+    // Compare the 2 dates
+    if (timevar1 < timevar2) return -1;
+    if (timevar1 > timevar2) return 1;
+    return 0;
+    });
+// the above actually sorts and saves the new array as a new usable sorted array
+  console.log(sortedArrayByTime);
 // DOM generate the comments with displayComment
     result.data.forEach(entry => {
-
       displayComment(entry);
     });
   });
-
 
 
 
@@ -68,10 +79,16 @@ const commentForm = document.querySelector('.comment__form');
 // axios.all([axiosrequest1, axiosrequest2, axiosrequest3])
 commentForm.addEventListener('submit', function(event) {
   event.preventDefault();
+  while (commentsContainer.firstChild) {
+    commentsContainer.removeChild(commentsContainer.firstChild);
+  }
   name = event.target.name.value;
   comment = event.target.comment.value;
   console.log(name);
   console.log(comment);
+  // try to do a set Axios sequence of commands
+
+
   axios.post(postCommentsEndpoint, {
     "name": `${name}`,
     "comment": `${comment}`,
@@ -79,9 +96,62 @@ commentForm.addEventListener('submit', function(event) {
     {headers: {
       "Content-Type" : 'application/json'
     }
-  });
+  })
+  .then(
+    axios.get(getCommentsEndpoint)
+    .then(result => {
+    console.log(result)
+    // sortedArrayByTime = result.data
+    // sortedArrayByTime.reverse(function(object1, object2) {
+    // var timevar1 = new Date(object1.updated_at),
+    //   timevar2 = new Date(object2.updated_at);
+    // // Compare the 2 dates
+    // if (timevar1 < timevar2) return -1;
+    // if (timevar1 > timevar2) return 1;
+    // return 0;
+    // });
+  // the above actually sorts and saves the new array as a new usable sorted array
+    console.log(sortedArrayByTime);
+  // DOM generate the comments with displayComment
+    result.data.forEach(entry => {
+      displayComment(entry);
+    });
+}))
+
+    // axios.post(postCommentsEndpoint, {
+    //   "name": `${name}`,
+    //   "comment": `${comment}`,
+    //   },
+    //   {headers: {
+    //     "Content-Type" : 'application/json'
+    //   }
+    // })
+  // ,
+  //   axios.get(getCommentsEndpoint)
+  //   .then(result => {
+      
+      // while (containerEl.firstChild) {
+      //   containerEl.removeChild(containerEl.firstChild);
+      // }
+  //     sortedArrayByTime = result.data
+  //     sortedArrayByTime.reverse(function(object1, object2) {
+  //     var timevar1 = new Date(object1.updated_at),
+  //       timevar2 = new Date(object2.updated_at);
+  //     // Compare the 2 dates
+  //     if (timevar1 < timevar2) return -1;
+  //     if (timevar1 > timevar2) return 1;
+  //     return 0;
+  //     });
+  // // the above actually sorts and saves the new array as a new usable sorted array
+  //   console.log(sortedArrayByTime);
+  // // DOM generate the comments with displayComment
+  //     result.data.forEach(entry => {
+  //       displayComment(entry);
+  //     });
+  //   }); 
+  // ]);
 // end of axios post
-});
+  });
 // commentForm.addEventListener('submit', (event) => {
 //   event.preventDefault();
 
@@ -104,9 +174,5 @@ commentForm.addEventListener('submit', function(event) {
 //   commentForm.reset();
 // });
 
-// function getFormattedDate() {
-//   const currentDate = new Date();
 
-//   return `${currentDate.getMonth() + 1}/${currentDate.getDate()}/${currentDate.getFullYear()}`;
-// }
 

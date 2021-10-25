@@ -71,8 +71,6 @@ axios.get(getCommentsEndpoint)
     });
   });
 
-
-
 // This is just for form submit
 const commentForm = document.querySelector('.comment__form');
 

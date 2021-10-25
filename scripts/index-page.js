@@ -26,6 +26,7 @@ const displayComment = (comments) => {
   nameE1.classList.add('comments__name');
   nameE1.innerText = comments.name;
 
+  console.log(comments.timestamp);
   const dateE1 = document.createElement('h4');
   dateE1.classList.add('comments__date');
   dateE1.innerText = getFormattedDate(comments.timestamp);
@@ -45,12 +46,11 @@ const displayComment = (comments) => {
   commentsContainer.appendChild(commentsE1);
 }
 
-function getFormattedDate() {
-  const currentDate = new Date();
+function getFormattedDate(date) {
+  const currentDate = new Date(date);
 
-  return `${currentDate.getMonth() + 1}/${currentDate.getDate()}/${currentDate.getFullYear()}`;
+  return `${(currentDate.getMonth() + 1)}/${currentDate.getDate()}/${currentDate.getFullYear()}`;
 }
-
 
 axios.get(getCommentsEndpoint)
   .then(result => {
@@ -101,20 +101,20 @@ commentForm.addEventListener('submit', function(event) {
     axios.get(getCommentsEndpoint)
     .then(result => {
     console.log(result)
-    // sortedArrayByTime = result.data
-    // sortedArrayByTime.reverse(function(object1, object2) {
-    // var timevar1 = new Date(object1.updated_at),
-    //   timevar2 = new Date(object2.updated_at);
-    // // Compare the 2 dates
-    // if (timevar1 < timevar2) return -1;
-    // if (timevar1 > timevar2) return 1;
-    // return 0;
-    // });
+    sortedArrayByTime = result.data
+    sortedArrayByTime.reverse(function(object1, object2) {
+    var timevar1 = new Date(object1.updated_at),
+      timevar2 = new Date(object2.updated_at);
+    // Compare the 2 dates
+    if (timevar1 < timevar2) return -1;
+    if (timevar1 > timevar2) return 1;
+    return 0;
+    });
   // the above actually sorts and saves the new array as a new usable sorted array
     console.log(sortedArrayByTime);
   // DOM generate the comments with displayComment
-    result.data.forEach(entry => {
-      displayComment(entry);
+    result.data.forEach(result => {
+      displayComment(result);
     });
 }))
 
